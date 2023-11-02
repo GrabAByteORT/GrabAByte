@@ -8,6 +8,8 @@ public class Receta
     public string Descripcion{get;set;}
     public string Pasos{get;set;}
     public string Tipo{get;set;}
+    public string Img{get;set;}
+    public string Banner{get;set;}
 
     public Receta()
     {

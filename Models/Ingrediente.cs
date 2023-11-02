@@ -10,7 +10,7 @@ public class Ingrediente
         
     }
 
-    public Ingrediente(int id, int nombre)
+    public Ingrediente(int id, string nombre)
     {
         ID = id;
         Nombre = nombre;

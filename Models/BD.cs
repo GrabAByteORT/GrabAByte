@@ -1,5 +1,6 @@
 using System.Data.SqlClient;
 using Dapper;
+using System.Data;
 
 public static class BD
 {
