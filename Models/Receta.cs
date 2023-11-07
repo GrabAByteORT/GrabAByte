@@ -4,7 +4,7 @@ public class Receta
 {
     public int ID{get;set;}
     public string Nombre{get;set;}
-    public datetime FechaPublicacion{get;set;}
+    public DateTime FechaPublicacion{get;set;}
     public string Descripcion{get;set;}
     public string Pasos{get;set;}
 
@@ -13,7 +13,7 @@ public class Receta
 
     }
 
-    public Receta(int id, string nombre, datetime fechapublicacion, string descripcion, string pasos)
+    public Receta(int id, string nombre, DateTime fechapublicacion, string descripcion, string pasos)
     {
         ID = id;
         Nombre = nombre;

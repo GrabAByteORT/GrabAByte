@@ -1,5 +1,6 @@
 using System.Data.SqlClient;
 using Dapper;
+using System.Data;
 
 public static class BD
 {
@@ -24,7 +25,7 @@ public static class BD
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryAllRecetas";
-            ListaRecetas = db.Query<Ingrediente>(sp, commandType: CommandType.StoredProcedure).ToList();
+            ListaRecetas = db.Query<Receta>(sp, commandType: CommandType.StoredProcedure).ToList();
         }
         return ListaRecetas;
     }
@@ -43,7 +44,7 @@ public static class BD
     public static List<Receta> LevantarRecetasPorIngrediente(int idIngrediente)
     {
         List<Receta> ListaRecetasPorIngrediente = null;
-        using(SqlConnection = new SqlConnection(_connectionString))
+        using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryRecetaPorIngrediente";
             ListaRecetasPorIngrediente = db.Query<Receta>(sp, new {IDIngrediente = idIngrediente}, commandType: CommandType.StoredProcedure).ToList();
@@ -54,22 +55,49 @@ public static class BD
     public static Usuario LevantarUsuario(string nombre, string contrasenia)
     {
         Usuario UsuarioLevantado = null;
-        using(SqlConnection = new SqlConnection(_connectionString))
+        using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryUsuario";
-            UsuarioLevantado = db.Query<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
+            UsuarioLevantado = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
         }
         return UsuarioLevantado;
     }
 
-    public static List<Receta> RecetasGuardadas(int idUsuario)
+    public static List<Receta> LevantarRecetasGuardadas(int idUsuario)
     {
         List<Receta> ListaRecetasSegunUsuario = null;
-        using(SqlConnection = new SqlConnection(_connectionString))
+        using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryGuardados";
             ListaRecetasSegunUsuario = db.Query<Receta>(sp, new {IDUsuario = idUsuario}, commandType: CommandType.StoredProcedure).ToList();
         }
         return ListaRecetasSegunUsuario;
+    }
+
+    public static void IngresarValoracion(Valoracion Val)
+    {
+        string sp = "IngresarValoracion";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(sp, new {IDReceta = Val.ID, Valoracion = Val.Puntaje}, commandType: CommandType.StoredProcedure);
+        }
+    }
+
+    public static void CrearUsuario(Usuario Usu)
+    {
+        string sp = "CrearUsuario";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(sp, new{Nombre = Usu.Nombre, Contrasenia = Usu.Contrasenia},  commandType: CommandType.StoredProcedure);
+        }
+    }
+
+    public static void SubirReceta(Receta Rece)
+    {
+        string sp = "SubirReceta";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo})
+        }
     }
 }
