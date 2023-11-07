@@ -22,8 +22,11 @@ public class HomeController : Controller
     }
     public IActionResult Home()
     {
-        ViewBag.RecetasDestacadas = BD.ListaRecetas.Take(4);
-        ViewBag.Usuario = BD.UsuarioIngresado;
+        Random rnd = new Random();
+        int random = rnd.Next(0,(BD.ListaRecetas.Count-3));
+        ViewBag.RecetasDestacadas = BD.ListaRecetas.GetRange(random,4);
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+
         return View();
     }
     public IActionResult IniciarSesion()
@@ -39,6 +42,40 @@ public class HomeController : Controller
         ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
+    public IActionResult BusquedaIngredientes()
+    {
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        return View();
+    }
+    
+    public IActionResult BusquedaRecetas()
+    {
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        return View();
+    }
+    public IActionResult Resultados(string nombre)
+    {
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
+        return View();
+    }
+    public IActionResult Resultados(List<Ingrediente> ingredientes)
+    {
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        for(int i = 0; i<ingredientes.Count; i++)
+        {
+            ViewBag.ListaRecetas += BD.LevantarRecetasPorIngrediente(ingredientes[i].ID);
+        }
+        
+        return View();
+    }
+    public IActionResult DetalleReceta(Receta receta)
+    {
+        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(receta.ID);
+        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        ViewBag.Receta = receta;
+        return View();
+    }
     public IActionResult Privacy()
     {
         return View();
@@ -49,4 +86,6 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    
+
 }

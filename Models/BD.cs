@@ -59,6 +59,17 @@ public static class BD
         return ListaRecetasPorIngrediente;
     }
 
+    public static List<Receta> LevantarRecetasPorNombre(string nombre)
+    {
+        List<Receta> ListaRecetasPorNombre = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "QueryRecetaPorNombre";
+            ListaRecetasPorNombre = db.Query<Receta>(sp, new{Nombre = nombre}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return ListaRecetasPorNombre;
+    }
+
     public static Usuario LevantarUsuario(string nombre, string contrasenia)
     {
         Usuario Usuario;
