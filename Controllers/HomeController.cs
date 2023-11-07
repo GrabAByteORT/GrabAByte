@@ -36,6 +36,7 @@ public class HomeController : Controller
     }
     public IActionResult Perfil()
     {
+        ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
     public IActionResult Privacy()

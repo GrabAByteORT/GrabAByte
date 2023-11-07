@@ -21,4 +21,11 @@ public class Usuario
         Email = email;
         Foto = foto;
     }
+    public Usuario(string nombre, string contra, string email, string foto)
+    {
+        Nombre = nombre;
+        Contrasenia = contra; 
+        Email = email;
+        Foto = foto;
+    }
 }

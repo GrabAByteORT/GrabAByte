@@ -15,6 +15,10 @@ public static class BD
     {
         UsuarioIngresado = LevantarUsuario("default","default");
     }
+    public static void InicializarUsuario(Usuario usuario)
+    {
+        UsuarioIngresado = usuario;
+    }
     public static void LevantarIngredientes()
     {
         using(SqlConnection db = new SqlConnection(_connectionString))
@@ -57,13 +61,13 @@ public static class BD
 
     public static Usuario LevantarUsuario(string nombre, string contrasenia)
     {
-        Usuario UsuarioLevantado = null;
+        Usuario Usuario;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryUsuario";
-            UsuarioLevantado = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
+            Usuario = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
         }
-        return UsuarioLevantado;
+        return Usuario;
     }
 
     public static List<Receta> LevantarRecetasGuardadas(int idUsuario)
