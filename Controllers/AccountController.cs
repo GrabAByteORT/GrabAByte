@@ -10,7 +10,15 @@ public class AccountController : Controller
 
     public IActionResult Ingreso(string nombre, string contraseña)
     {
-        
+        Usuario user = BD.LevantarUsuario(nombre,contraseña);
+        string ret;
+        if(user != null){
+            ret = "Home";
+        }
+        else{
+            ret = "InicioSesion";
+        }
+        return RedirectToAction("Home",ret);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

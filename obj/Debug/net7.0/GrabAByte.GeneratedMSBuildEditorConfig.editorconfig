@@ -9,7 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GrabAByte
 build_property.RootNamespace = GrabAByte
+<<<<<<< HEAD
 build_property.ProjectDir = z:\Programación\GrabAByte\GrabAByte\
+=======
+<<<<<<< HEAD
+build_property.ProjectDir = z:\2023\Programacion\GrabAByte\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = z:\2023\Programacion\GrabAByte
+build_property._RazorSourceGeneratorDebug = 
+
+[z:/2023/Programacion/GrabAByte/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/2023/Programacion/GrabAByte/Views/Shared/_Layout.cshtml]
+=======
+build_property.ProjectDir = z:\2023\programacion\cuatrimestre2\GrabAByte\
+>>>>>>> 46a70b42ee43dc04bbaef395af7b3240c0ba44e3
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -68,6 +106,11 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [z:/Programación/GrabAByte/GrabAByte/Views/Shared/_Layout.cshtml]
+=======
+[z:/2023/programacion/cuatrimestre2/GrabAByte/Views/Shared/_Layout.cshtml]
+>>>>>>> 3ab2d38b22366e16f653310840e58167da0ee93f
+>>>>>>> 46a70b42ee43dc04bbaef395af7b3240c0ba44e3
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yhja1s4xtf

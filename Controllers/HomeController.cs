@@ -15,15 +15,29 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        List<Receta> ListaRecetas = BD.LevantarRecetas();
-        ViewBag.RecetasDestacadas = ListaRecetas.Take(4);
+        BD.LevantarRecetas();
+        BD.LevantarIngredientes();
+        BD.InicializarUsuario();
+        return RedirectToAction("Home","Home");
+    }
+    public IActionResult Home()
+    {
+        ViewBag.RecetasDestacadas = BD.ListaRecetas.Take(4);
+        ViewBag.Usuario = BD.UsuarioIngresado;
         return View();
     }
     public IActionResult IniciarSesion()
     {
         return View();
     }
-
+    public IActionResult Registro()
+    {
+        return View();
+    }
+    public IActionResult Perfil()
+    {
+        return View();
+    }
     public IActionResult Privacy()
     {
         return View();
