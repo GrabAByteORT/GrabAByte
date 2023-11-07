@@ -15,6 +15,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        List<Receta> ListaRecetas = BD.LevantarRecetas();
+        ViewBag.RecetasDestacadas = ListaRecetas.Take(4);
+        return View();
+    }
+    public IActionResult IniciarSesion()
+    {
         return View();
     }
 
