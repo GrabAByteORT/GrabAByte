@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BKRZE9dPszROTInVGsDXOiYw5smbnwfqPHxmOxVmdZs=",
+  "Hash": "aVp+6hKC5vRXS3fdlfarRwqfWgarBksB9yIVaQfTxbk=",
   "Source": "GrabAByte",
   "BasePath": "_content/GrabAByte",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default_profile.png",
+      "SourceId": "GrabAByte",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\",
+      "BasePath": "_content/GrabAByte",
+      "RelativePath": "img/default_profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\default_profile.png"
     },
     {
       "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\logo.PNG",
