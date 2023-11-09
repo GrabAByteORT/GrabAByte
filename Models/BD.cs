@@ -59,6 +59,7 @@ public static class BD
         {
             string sp = "QueryUsuario";
             UsuarioLevantado = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
+            
         }
         return UsuarioLevantado;
     }

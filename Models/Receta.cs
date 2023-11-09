@@ -16,11 +16,7 @@ public class Receta
 
     }
 
-<<<<<<< HEAD
-    public Receta(int id, string nombre, DateTime fechapublicacion, string descripcion, string pasos)
-=======
     public Receta(int id, string nombre, DateTime fechapublicacion, string descripcion, string pasos, string tipo)
->>>>>>> 3ab2d38b22366e16f653310840e58167da0ee93f
     {
         ID = id;
         Nombre = nombre;
