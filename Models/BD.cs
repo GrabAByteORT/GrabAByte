@@ -7,27 +7,34 @@ public static class BD
     public static string _connectionString = @"Server=localhost;
     DataBase=BDGrabAByte;Trusted_Connection=True";
 
+    public static List<Receta> ListaRecetas {get;set;}
+    public static List<Ingrediente> ListaIngredientes {get;set;}
+    public static Usuario UsuarioIngresado{get;set;}
 
-    public static List<Ingrediente> LevantarIngredientes()
+    public static void InicializarUsuario()
     {
-        List<Ingrediente> ListaIngredientes = null;
+        UsuarioIngresado = LevantarUsuario("default","default");
+    }
+    public static void InicializarUsuario(Usuario usuario)
+    {
+        UsuarioIngresado = usuario;
+    }
+    public static void LevantarIngredientes()
+    {
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryAllIngredientes";
             ListaIngredientes = db.Query<Ingrediente>(sp, commandType: CommandType.StoredProcedure).ToList();
         }
-        return ListaIngredientes;
     }
 
-    public static List<Receta> LevantarRecetas()
+    public static void LevantarRecetas()
     {
-        List<Receta> ListaRecetas = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryAllRecetas";
             ListaRecetas = db.Query<Receta>(sp, commandType: CommandType.StoredProcedure).ToList();
         }
-        return ListaRecetas;
     }
 
     public static List<Ingrediente> LevantarIngredientesPorReceta(int idReceta)
@@ -52,16 +59,26 @@ public static class BD
         return ListaRecetasPorIngrediente;
     }
 
+    public static List<Receta> LevantarRecetasPorNombre(string nombre)
+    {
+        List<Receta> ListaRecetasPorNombre = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "QueryRecetaPorNombre";
+            ListaRecetasPorNombre = db.Query<Receta>(sp, new{Nombre = nombre}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return ListaRecetasPorNombre;
+    }
+
     public static Usuario LevantarUsuario(string nombre, string contrasenia)
     {
-        Usuario UsuarioLevantado = null;
+        Usuario Usuario;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryUsuario";
-            UsuarioLevantado = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
-            
+            Usuario = db.QueryFirstOrDefault<Usuario>(sp, new {Nombre = nombre, Contrasenia = contrasenia}, commandType: CommandType.StoredProcedure);
         }
-        return UsuarioLevantado;
+        return Usuario;
     }
 
     public static List<Receta> LevantarRecetasGuardadas(int idUsuario)
@@ -98,7 +115,7 @@ public static class BD
         string sp = "SubirReceta";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo})
+            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo});
         }
     }
 }
