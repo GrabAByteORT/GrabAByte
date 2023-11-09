@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\logo.PNG",
+      "PackagePath": "staticwebassets\\img\\logo.PNG"
+    },
+    {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
