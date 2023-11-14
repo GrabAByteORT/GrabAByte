@@ -39,9 +39,17 @@ public class HomeController : Controller
     }
     public IActionResult Perfil()
     {
-        ViewBag.Usuario = BD.UsuarioIngresado;  
+        ViewBag.Usuario = BD.UsuarioIngresado;
         return View();
     }
+    public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
+    {
+
+        Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc, Pasos,Tipo);
+        BD.SubirReceta(Rece, ingredientes);
+        return null;
+    }
+
     public IActionResult BusquedaIngredientes()
     {
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
