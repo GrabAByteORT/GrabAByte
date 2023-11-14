@@ -1,0 +1,25 @@
+﻿<div style="text-align: center;">
+    <img src="logo.png" alt="LOGO">
+</div>
+
+@for(int i=0; i<4; i++)
+{  
+    <div class="card" style="width: 18rem;">
+        <img src="@ViewBag.RecetaDestacada.Img" class="card-img-top" alt="img">
+        <div>
+            <h5 class="card-title">@ViewBag.RecetaDestacada.Nombre</h5>
+        </div>
+    </div>
+}
+
+<div>
+    <p class="fw-semibold text-muted" style="text-align: center; margin-top: 8%">Quieres buscar por...</p>
+</div>
+
+<div class="button busqueda" >
+    <a type="button" class="btn btn-warning">Ingredientes</a>
+    <a type="button" class="btn btn-warning">Receta</a>
+</div>
+
+
+
