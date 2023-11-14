@@ -1,0 +1,51 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RecetaModal">
+  Subir Receta
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="RecetaModal" tabindex="-1" aria-labelledby="RecetaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="RecetaModalLabel">Subir Receta</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            <label for="Titulo">Titulo</label>
+            <input type="text" name="Titulo" id="Titulo">
+            <br>
+            <label for="Portada">Portada</label>
+            <input type="file" name="Portada" id="Portada">
+            <br>
+            <label for="Banner">Banner</label>
+            <input type="file" name="Banner" id="Banner">
+            <br>
+            <label for="Pasos">Pasos</label>
+            <input type="text" name="Pasos" id="Pasos">
+            <br>
+            <label for="Descripcion">Descripcion</label>
+            <input type="text" name="Descripcion" id="Descripcion">
+            <br>
+            <label for="TipoPP">Plato Principal</label>
+            <input type="checkbox" name="TipoPP" id="TipoPP">
+            <br>
+            <label for="TipoPostre">Postre</label>
+            <input type="checkbox" name="TipoPostre" id="TipoPostre">
+            <br>
+             <label for="TipoGuarnicion">Guarnición</label>
+            <input type="checkbox" name="TipoGuarnicion" id="TipoGuarnicion">
+            <br>
+             <label for="TipoEntrada">Entrada</label>
+            <input type="checkbox" name="TipoEntrada" id="TipoEntrada">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
