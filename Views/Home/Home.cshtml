@@ -2,15 +2,9 @@
     <img src="logo.png" alt="LOGO">
 </div>
 
-@for(int i=0; i<4; i++)
-{  
-    <div class="card" style="width: 18rem;">
-        <img src="@ViewBag.RecetaDestacada.Img" class="card-img-top" alt="img">
-        <div>
-            <h5 class="card-title">@ViewBag.RecetaDestacada.Nombre</h5>
-        </div>
-    </div>
-}
+<div>
+    <a class="creditos" href='@Url.Action("Creditos","Home")'>Creditos</a>
+</div>
 
 <div>
     <p class="fw-semibold text-muted" style="text-align: center; margin-top: 8%">Quieres buscar por...</p>
