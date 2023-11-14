@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GrabAByte
 build_property.RootNamespace = GrabAByte
-build_property.ProjectDir = Z:\2023\Prog\Grab a Byte\GrabAByte\
+build_property.ProjectDir = z:\2023\Prog\Grab a Byte\GrabAByte\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = Z:\2023\Prog\Grab a Byte\GrabAByte
+build_property.MSBuildProjectDirectory = z:\2023\Prog\Grab a Byte\GrabAByte
 build_property._RazorSourceGeneratorDebug = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/BusquedaIngredientes.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/BusquedaIngredientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNxdWVkYUluZ3JlZGllbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/BusquedaRecetas.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/BusquedaRecetas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNxdWVkYVJlY2V0YXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Creditos.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Creditos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVkaXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/DetalleReceta.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/DetalleReceta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGxlUmVjZXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Home.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/InicioSesion.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/InicioSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaW9TZXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Perfil.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Registro.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Resultados.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Home/Resultados.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bHRhZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/Error.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/_ValidationScriptsPartial.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/_ViewImports.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/_ViewStart.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/_Layout.cshtml]
+[z:/2023/Prog/Grab a Byte/GrabAByte/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yhja1s4xtf
