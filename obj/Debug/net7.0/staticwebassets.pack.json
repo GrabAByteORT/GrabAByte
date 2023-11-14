@@ -17,6 +17,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\AGOS.jpg",
+      "PackagePath": "staticwebassets\\img\\creditos\\AGOS.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\JOACO.jpg",
+      "PackagePath": "staticwebassets\\img\\creditos\\JOACO.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\JULI.jpg",
+      "PackagePath": "staticwebassets\\img\\creditos\\JULI.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\MAXI.jpg",
+      "PackagePath": "staticwebassets\\img\\creditos\\MAXI.jpg"
+    },
+    {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default_profile.png",
       "PackagePath": "staticwebassets\\img\\default_profile.png"
     },
