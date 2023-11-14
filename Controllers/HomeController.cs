@@ -26,41 +26,48 @@ public class HomeController : Controller
         int random = rnd.Next(0,(BD.ListaRecetas.Count-3));
         ViewBag.RecetasDestacadas = BD.ListaRecetas.GetRange(random,4);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
-
+        ViewBag.perfil = true;
         return View();
     }
     public IActionResult IniciarSesion()
     {
+        ViewBag.perfil = false;
         return View();
     }
     public IActionResult Registro()
     {
+        ViewBag.perfil = false;
         return View();
     }
     public IActionResult Perfil()
     {
+        ViewBag.perfil = false;
         ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
     public IActionResult BusquedaIngredientes()
     {
+        ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         return View();
     }
     
     public IActionResult BusquedaRecetas()
     {
+        ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         return View();
     }
     public IActionResult Resultados(string nombre)
     {
+        ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
         return View();
     }
     public IActionResult Resultados(List<Ingrediente> ingredientes)
     {
+        ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         for(int i = 0; i<ingredientes.Count; i++)
         {
@@ -71,6 +78,7 @@ public class HomeController : Controller
     }
     public IActionResult DetalleReceta(Receta receta)
     {
+        ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(receta.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.Receta = receta;

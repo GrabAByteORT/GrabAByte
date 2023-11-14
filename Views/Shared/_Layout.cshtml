@@ -14,10 +14,12 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-
-        <section>
-            <a href='@Url.Action("Perfil","Home")' class="perfil"> <img src="/img/default_profile.png" alt="imgP"></a>
-        </section>
+        @if(ViewBag.perfil == true)
+        {
+            <section>
+                <a href='@Url.Action("Perfil","Home")' class="perfil"> <img src='ViewBag.FotoPerfil' alt="imgP"></a>
+            </section>
+        }
     </div>
 
 
