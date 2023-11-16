@@ -20,7 +20,7 @@ public class AccountController : Controller
             ret = "InicioSesion";
             BD.InicializarUsuario();
         }
-        return RedirectToAction("Home",ret);
+        return RedirectToAction(ret,"Home");
     }
     public IActionResult Registro(string nombre,string contrasenia, string email, string foto)
     {
@@ -45,7 +45,7 @@ public class AccountController : Controller
         else{
             ret = "IniciarSesion";
         }
-        return RedirectToAction("Home",ret);
+        return RedirectToAction(ret,"Home");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
