@@ -110,12 +110,18 @@ public static class BD
         }
     }
 
-    public static void SubirReceta(Receta Rece)
+    public static void SubirReceta(Receta Rece, List<Ingrediente> Ingrediente)
     {
-        string sp = "SubirReceta";
+        string sp = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo});
+            sp = "SubirReceta";
+            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo, Img = Rece.Img, Banner = Rece.Banner});
+            sp = "SubirIngrediente";
+            for(int i = 0; i > Ingrediente.Count; i++)
+            {
+                db.Execute(sp, new{NombreIngrediente = Ingrediente[i].Nombre, IDReceta = Rece.ID});
+            }
         }
     }
 }
