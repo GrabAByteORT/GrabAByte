@@ -36,6 +36,18 @@ public class AccountController : Controller
         }
     }
 
+    public IActionResult Perfil()
+    {
+        string ret = null;
+        if(BD.UsuarioIngresado.Nombre != "default"){
+            ret = "Perfil";
+        }
+        else{
+            ret = "IniciarSesion";
+        }
+        return RedirectToAction("Home",ret);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
