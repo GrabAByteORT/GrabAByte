@@ -59,3 +59,15 @@ button.accept-policy {
   margin-right: 30px;
   border-radius: 100%;
 }
+.perfil
+{
+  display: flex;
+  width:60px;
+  height: 60px;
+  position:fixed;
+  flex-direction: row;
+  top:30px;
+  right:0;
+  margin-right: 30px;
+  border-radius: 100%;
+}
