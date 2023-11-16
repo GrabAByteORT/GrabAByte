@@ -59,7 +59,7 @@ button.accept-policy {
   margin-right: 30px;
   border-radius: 100%;
 }
-.perfil
+.flecha
 {
   display: flex;
   width:60px;
@@ -67,7 +67,6 @@ button.accept-policy {
   position:fixed;
   flex-direction: row;
   top:30px;
-  right:0;
-  margin-right: 30px;
-  border-radius: 100%;
+  left:0;
+  margin-left: 30px;
 }
