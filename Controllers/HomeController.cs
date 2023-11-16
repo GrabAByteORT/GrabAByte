@@ -27,20 +27,24 @@ public class HomeController : Controller
         ViewBag.RecetasDestacadas = BD.ListaRecetas.GetRange(random,4);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.perfil = true;
+        ViewBag.volverHome = false;
         return View();
     }
     public IActionResult IniciarSesion()
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = false;
         return View();
     }
     public IActionResult Registro()
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = false;
         return View();
     }
     public IActionResult Perfil()
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = false;
         ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
@@ -55,6 +59,7 @@ public class HomeController : Controller
 
     public IActionResult BusquedaIngredientes()
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         return View();
@@ -62,12 +67,14 @@ public class HomeController : Controller
     
     public IActionResult BusquedaRecetas()
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         return View();
     }
     public IActionResult Resultados(string nombre)
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
@@ -75,6 +82,7 @@ public class HomeController : Controller
     }
     public IActionResult Resultados(List<Ingrediente> ingredientes)
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         for(int i = 0; i<ingredientes.Count; i++)
@@ -86,6 +94,7 @@ public class HomeController : Controller
     }
     public IActionResult DetalleReceta(Receta receta)
     {
+        ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(receta.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
