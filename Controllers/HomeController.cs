@@ -41,12 +41,7 @@ public class HomeController : Controller
     }
     public IActionResult Perfil()
     {
-<<<<<<< HEAD
-        ViewBag.perfil = false;
-        ViewBag.Usuario = BD.UsuarioIngresado;  
-=======
         ViewBag.Usuario = BD.UsuarioIngresado;
->>>>>>> 8fe0153ba50b0521acf6cf0292e6c9a351ecf927
         return View();
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
