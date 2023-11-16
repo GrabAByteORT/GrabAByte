@@ -41,7 +41,8 @@ public class HomeController : Controller
     }
     public IActionResult Perfil()
     {
-        ViewBag.Usuario = BD.UsuarioIngresado;
+        ViewBag.perfil = false;
+        ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
