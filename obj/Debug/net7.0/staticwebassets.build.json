@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ehqptfXrjNTJ73s7XCIC57+5KGV/EmqOUsdvJyYIeOY=",
+  "Hash": "g7T0ybFlKeUVV6noH9+16VLWdE8P0uq0DqApvKOMiE0=",
   "Source": "GrabAByte",
   "BasePath": "_content/GrabAByte",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\img\\arroz.png"
     },
     {
+      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\bubble.png",
+      "SourceId": "GrabAByte",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\",
+      "BasePath": "_content/GrabAByte",
+      "RelativePath": "img/bubble.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bubble.png"
+    },
+    {
       "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\AGOS.jpg",
       "SourceId": "GrabAByte",
       "SourceType": "Discovered",
@@ -187,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\img\\creditos\\MAXI.jpg"
     },
     {
-      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default_profile.png",
+      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default.png",
       "SourceId": "GrabAByte",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\",
       "BasePath": "_content/GrabAByte",
-      "RelativePath": "img/default_profile.png",
+      "RelativePath": "img/default.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,7 +218,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\default_profile.png"
+      "OriginalItemSpec": "wwwroot\\img\\default.png"
+    },
+    {
+      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\flecha.png",
+      "SourceId": "GrabAByte",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\",
+      "BasePath": "_content/GrabAByte",
+      "RelativePath": "img/flecha.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\flecha.png"
     },
     {
       "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\logo.PNG",
@@ -219,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo.PNG"
+    },
+    {
+      "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\Thumbs.db",
+      "SourceId": "GrabAByte",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\",
+      "BasePath": "_content/GrabAByte",
+      "RelativePath": "img/Thumbs.db",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Thumbs.db"
     },
     {
       "Identity": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\js\\site.js",

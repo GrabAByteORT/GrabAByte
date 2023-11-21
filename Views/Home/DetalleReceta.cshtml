@@ -1,38 +1,7 @@
-<<<<<<< HEAD
-<p>@ViewBag.Receta.Nombre</p>
-=======
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ValoracionModal">
-  Subir valoracion
-</button>
+<div>
+    <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner">
+    <h2>@ViewBag.Receta.Nombre</h2>
+    <p>@ViewBag.Receta.Descripcion</p>
+    <p>@ViewBag.Receta.Pasos</p>
 
-<!-- Modal -->
-<div class="modal fade" id="ValoracionModal" tabindex="-1" aria-labelledby="ValoracionModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ValoracionModalLabel">Subir valoracion</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="">
-            <label for="Valoracion">Valoracion</label>
-            <input type="range" name="Valoracion" id="Valoracion" min="1" max="5">
-            <br>
-            <label for="Dificultad">Dificultad</label>
-            <input type="range" name="Dificultad" id="Dificultad" min="1" max="5">
-            <br>
-             <label for="Duracion">Duracion</label>
-            <input type="time" name="Duracion" id="Duracion">
-            <br>
-            
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
->>>>>>> 6b34e48217dd16b670ca4fea9c3a7d51a103cd36

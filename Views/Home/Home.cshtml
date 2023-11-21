@@ -1,11 +1,9 @@
-﻿<div style="text-align: center;">
-    <img src="logo.png" alt="LOGO">
+﻿<div style="text-align: center; margin-top: 2%">
+    <img src="/img/logo.png" alt="LOGO" style="height: 20%; width: 20%">
 </div>
-
-
 <div style="display: flex; flex-direction: row !important; justify-content: center; gap: 3vw; margin-top: 4%; margin-bottom: 4%">
 @foreach(Receta rec in ViewBag.RecetasDestacadas){
-    <a href='@Url.Action("DetalleReceta", "Home", new {receta = rec})'>
+    <a href='@Url.Action("DetalleReceta", "Home", rec)'>
     <div class="card">
         <img src="@rec.Img" alt="img" class="imgboxhome"><br>
         <h3 style="text-decoration: none;">@rec.Nombre</h3>
@@ -27,9 +25,10 @@
     <a type="button" class="btn btn-warning">Receta</a>
 </div>
 <footer>
-        <p style="text-align: center; margin-top: 4%">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
-        <div style="margin-top: 3%; text-align: center">
-            <p>No estas decidido o estás dispuesto a probar cosas nuevas?</p><br>
-            <a href="" style="color: rgb(240, 194, 45); justifycontent: center" href="">Sorprendeme!</a>
+        <p style="display: flex; justify-content: center; margin-top: 2%">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+        <div style="margin-top: 1%; text-align: center">
+            <p>No estas decidido o estás dispuesto a probar cosas nuevas?</p>
+            <a href="" style="color: rgb(240, 194, 45); justifycontent: center">Sorprendeme!</a>
         </div>
 </footer>
+</div>

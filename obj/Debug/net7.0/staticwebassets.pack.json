@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\img\\Thumbs.db"
+    },
+    {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\arroz.png",
       "PackagePath": "staticwebassets\\img\\arroz.png"
+    },
+    {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\bubble.png",
+      "PackagePath": "staticwebassets\\img\\bubble.png"
     },
     {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\AGOS.jpg",
@@ -37,8 +45,12 @@
       "PackagePath": "staticwebassets\\img\\creditos\\MAXI.jpg"
     },
     {
-      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default_profile.png",
-      "PackagePath": "staticwebassets\\img\\default_profile.png"
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\default.png",
+      "PackagePath": "staticwebassets\\img\\default.png"
+    },
+    {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\flecha.png",
+      "PackagePath": "staticwebassets\\img\\flecha.png"
     },
     {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\logo.PNG",

@@ -92,13 +92,13 @@ public class HomeController : Controller
         
         return View();
     }
-    public IActionResult DetalleReceta(Receta receta)
+    public IActionResult DetalleReceta(Receta rec)
     {
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
-        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(receta.ID);
+        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
-        ViewBag.Receta = receta;
+        ViewBag.Receta = rec;
         return View();
     }
     public IActionResult Privacy()
