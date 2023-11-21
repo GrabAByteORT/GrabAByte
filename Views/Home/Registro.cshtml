@@ -1,17 +1,29 @@
-<form action='@Url.Action("Registro","Account")' method="post">
-  <button type="button" class="btn btn-secondary">Iniciar Sesion</button>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
-     <input type="text" class="formelement" id="username" name="nombre" autocomplete="off" placeholder="Nombre de usuario" required>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Mail</label>
-    <input type="email" class="form-control" id="Mail" aria-describedby="emailHelp" autocomplete="off" placeholder="Mail" required>
-    <div class="form-text">Nosotros nunca compartiremos tu contraseña.</div>
-  </div>
-  <button type="submit" value="Ingresar" class="btn btn-primary">Registrarse</button>
-</form>
+<div class="Registro" style="text-align: center;">
+    <div>
+        <img src="/img/logo.png" alt="LOGO" style="width: 35%; height: 35%;">
+    </div>
+    
+        <div class="form-text">Regístrate para más beneficios!</div>
+        
+
+    <form action='@Url.Action("Registro","Account")' method="post">
+     <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="text" class="form-control" id="username" name="nombre" autocomplete="off" placeholder="Nombre de usuario" required>
+    </div>
+    <div class="mb-3" style="margin-top: -2%">
+     <label for="exampleInputPassword1" class="form-label"></label>
+     <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
+    </div>
+    <div class="mb-3" style="margin-top: -2%">
+     <label for="exampleInputEmail1" class="form-label"></label>
+     <input type="email" class="form-control" id="Mail" aria-describedby="emailHelp" autocomplete="off" placeholder="Mail" required>
+     <div class="form-text" style="display: flex; justify-content: flex-start;">Nosotros nunca compartiremos tu contraseña.</div>
+    </div>
+    <div class="button">
+        <button type="submit" value="Ingresar" class="btn btn-primary" style="width: 60%">Registrarse</button>
+    </div>
+    </form>
+    <p class="fw-normal">Al registrarte aceptas nuestras <strong>Condiciones y la Política de privacidad.</strong></p>
+    <p class="fw-normal">Ya tienes una cuenta? <a href='@Url.Action("IniciarSesion","Home")'>Iniciar Sesion!</a></p>
+</div>

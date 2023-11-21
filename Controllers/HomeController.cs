@@ -51,7 +51,8 @@ public class HomeController : Controller
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
     {
-
+        ViewBag.volverHome = false;
+        ViewBag.perfil = false;
         Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc, Pasos,Tipo);
         BD.SubirReceta(Rece, ingredientes);
         return null;

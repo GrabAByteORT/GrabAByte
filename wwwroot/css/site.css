@@ -40,3 +40,18 @@ body {
   margin-right: 130px;
 }
 
+.Registro{
+  text-align: center;
+  align-items: center;
+}
+.IniciarSesion{
+  text-align: center;
+  align-items: center;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
