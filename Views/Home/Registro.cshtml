@@ -1,0 +1,17 @@
+<form action='@Url.Action("Registro","Account")' method="post">
+  <button type="button" class="btn btn-secondary">Iniciar Sesion</button>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
+     <input type="text" class="formelement" id="username" name="nombre" autocomplete="off" placeholder="Nombre de usuario" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Mail</label>
+    <input type="email" class="form-control" id="Mail" aria-describedby="emailHelp" autocomplete="off" placeholder="Mail" required>
+    <div class="form-text">Nosotros nunca compartiremos tu contraseña.</div>
+  </div>
+  <button type="submit" value="Ingresar" class="btn btn-primary">Registrarse</button>
+</form>

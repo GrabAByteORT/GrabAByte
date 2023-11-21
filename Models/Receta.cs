@@ -24,4 +24,13 @@ public class Receta
         Descripcion = descripcion;
         Pasos = pasos;
     }
+    
+    public Receta(string nombre, DateTime fechapublicacion, string descripcion, string pasos, string tipo)
+    {
+
+        Nombre = nombre;
+        FechaPublicacion = fechapublicacion;
+        Descripcion = descripcion;
+        Pasos = pasos;
+    }
 }

@@ -20,7 +20,7 @@ public class AccountController : Controller
             ret = "InicioSesion";
             BD.InicializarUsuario();
         }
-        return RedirectToAction("Home",ret);
+        return RedirectToAction(ret,"Home");
     }
     public IActionResult Registro(string nombre,string contrasenia, string email, string foto)
     {
@@ -34,6 +34,18 @@ public class AccountController : Controller
             BD.CrearUsuario(Usu);
             return RedirectToAction("Home","Home");
         }
+    }
+
+    public IActionResult Perfil()
+    {
+        string ret = null;
+        if(BD.UsuarioIngresado.Nombre != "default"){
+            ret = "Perfil";
+        }
+        else{
+            ret = "IniciarSesion";
+        }
+        return RedirectToAction(ret,"Home");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
