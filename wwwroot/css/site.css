@@ -54,3 +54,17 @@ body {
   right:0;
   margin-right: 130px;
 }
+
+.card{
+  height: 12vw;
+  width: 12vw;
+  border: black, 1px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.imgboxhome{
+  width: 12vw;
+  height: 12vw;
+  border-radius: 10%;
+}

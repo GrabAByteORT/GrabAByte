@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\arroz.png",
+      "PackagePath": "staticwebassets\\img\\arroz.png"
+    },
+    {
       "Id": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\wwwroot\\img\\creditos\\AGOS.jpg",
       "PackagePath": "staticwebassets\\img\\creditos\\AGOS.jpg"
     },
