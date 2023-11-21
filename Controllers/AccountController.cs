@@ -13,12 +13,12 @@ public class AccountController : Controller
         Usuario user = BD.LevantarUsuario(nombre,contraseña);
         string ret;
         if(user != null){
+            ret = "IniciarSesion";
             BD.InicializarUsuario(user);
-            ret = "Home";
         }
         else{
-            ret = "InicioSesion";
             BD.InicializarUsuario();
+            ret = "Home";
         }
         return RedirectToAction(ret,"Home");
     }
@@ -27,7 +27,7 @@ public class AccountController : Controller
         Usuario Usu = new Usuario(nombre, contrasenia, email, foto);
         if(Usu == BD.LevantarUsuario(nombre, contrasenia))
         {
-            return RedirectToAction("Account","Ingreso", new {nombre = nombre, contrasenia = contrasenia});
+            return RedirectToAction("Ingreso","Account", new {nombre = nombre, contrasenia = contrasenia});
         }
         else
         {
