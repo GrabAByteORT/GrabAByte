@@ -40,6 +40,7 @@ body {
   margin-right: 130px;
 }
 
+<<<<<<< HEAD
 .Registro{
   text-align: center;
   align-items: center;
@@ -55,3 +56,21 @@ body {
   white-space: nowrap;
   line-height: 60px;
 }
+=======
+<<<<<<< HEAD
+.card{
+  height: 12vw;
+  width: 12vw;
+  border: black, 1px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.imgboxhome{
+  width: 12vw;
+  height: 12vw;
+  border-radius: 10%;
+}
+=======
+>>>>>>> 6b34e48217dd16b670ca4fea9c3a7d51a103cd36
+>>>>>>> 5a37b3222e5c60ac673ece7535465a6c845fce03
