@@ -30,10 +30,11 @@ public class HomeController : Controller
         ViewBag.volverHome = false;
         return View();
     }
-    public IActionResult IniciarSesion()
+    public IActionResult IniciarSesion(bool alert)
     {
         ViewBag.volverHome = true;
         ViewBag.perfil = false;
+        ViewBag.User = alert;
         return View();
     }
     public IActionResult Registro()
