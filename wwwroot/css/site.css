@@ -64,8 +64,9 @@ body {
 }
 
 .imgboxhome{
+  object-fit: cover;
   width: 12vw;
-  height: 12vw;
+  height: 12w;
   border-radius: 10%;
 }
 

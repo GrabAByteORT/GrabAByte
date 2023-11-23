@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5W2qBUy+W7AE6wDFqCbNEWOiHdzpKy3PpLBbvgYJxXVU75kLMyqRNUMkJUJZOQGlORZRjdr/0EXLAPafxbXVTQ==",
+  "dgSpecHash": "9nIirQ8Ju8SI+1EeOZ6UX9IZ/3MxANgytW2oNXrhtfjVV5A+IxvQvAUqO9DnBw3lD18njC4jJvEZ40vOy1CO5Q==",
   "success": true,
   "projectFilePath": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\GrabAByte.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\47866440\\.nuget\\packages\\dapper\\2.1.15\\dapper.2.1.15.nupkg.sha512",
+    "C:\\Users\\47866440\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
     "C:\\Users\\47866440\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\47866440\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\47866440\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
