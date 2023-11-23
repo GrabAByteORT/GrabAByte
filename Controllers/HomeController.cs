@@ -82,8 +82,12 @@ public class HomeController : Controller
         ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
         return View();
     }
-    public IActionResult Resultados(List<Ingrediente> ingredientes)
+    public IActionResult Resultados(string Ingrediente1, string Ingrediente2, string Ingrediente3)
     {
+        List<string> ingredientes = new List<string>();
+        ingredientes.Add(Ingrediente1);
+        ingredientes.Add(Ingrediente2);
+        ingredientes.Add(Ingrediente3);
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
@@ -94,15 +98,22 @@ public class HomeController : Controller
         
         return View();
     }
-    public IActionResult DetalleReceta(Receta receta)
+    public IActionResult DetalleReceta(Receta rec)
     {
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
-        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(receta.ID);
+        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
-        ViewBag.Receta = receta;
+        ViewBag.Receta = rec;
         return View();
     }
+
+    public IActionResult Creditos(){
+        ViewBag.perfil = true;
+        ViewBag.volverHome = true;
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

@@ -2,15 +2,26 @@
   "version": 3,
   "targets": {
     "net7.0": {
+<<<<<<< HEAD
       "Dapper/2.1.15": {
         "type": "package",
         "compile": {
           "lib/net5.0/Dapper.dll": {
+=======
+      "Dapper/2.1.24": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Dapper.dll": {
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net5.0/Dapper.dll": {
+=======
+          "lib/net7.0/Dapper.dll": {
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
             "related": ".xml"
           }
         }
@@ -163,20 +174,36 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Dapper/2.1.15": {
       "sha512": "1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
       "type": "package",
       "path": "dapper/2.1.15",
+=======
+    "Dapper/2.1.24": {
+      "sha512": "/2t2vsdJyZRsk13AsWigZpsuFvEwK+o3v862cEULXoww905gyKhJFSuwmZI/4Ui9COX9ZCFCI09UHyH4wVYl3A==",
+      "type": "package",
+      "path": "dapper/2.1.24",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Dapper.png",
+<<<<<<< HEAD
         "dapper.2.1.15.nupkg.sha512",
+=======
+        "dapper.2.1.24.nupkg.sha512",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
         "dapper.nuspec",
         "lib/net461/Dapper.dll",
         "lib/net461/Dapper.xml",
         "lib/net5.0/Dapper.dll",
         "lib/net5.0/Dapper.xml",
+<<<<<<< HEAD
+=======
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml",
         "readme.md"
@@ -498,28 +525,48 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+<<<<<<< HEAD
       "Dapper >= 2.1.15",
+=======
+      "Dapper >= 2.1.24",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\95596083\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\47866440\\.nuget\\packages\\": {},
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "Z:\\2023\\Prog\\Grab a Byte\\GrabAByte\\GrabAByte\\GrabAByte.csproj",
       "projectName": "GrabAByte",
       "projectPath": "Z:\\2023\\Prog\\Grab a Byte\\GrabAByte\\GrabAByte\\GrabAByte.csproj",
       "packagesPath": "C:\\Users\\95596083\\.nuget\\packages\\",
       "outputPath": "Z:\\2023\\Prog\\Grab a Byte\\GrabAByte\\GrabAByte\\obj\\",
+=======
+      "projectUniqueName": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\GrabAByte.csproj",
+      "projectName": "GrabAByte",
+      "projectPath": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\GrabAByte.csproj",
+      "packagesPath": "C:\\Users\\47866440\\.nuget\\packages\\",
+      "outputPath": "Z:\\2023\\programacion\\cuatrimestre2\\GrabAByte\\obj\\",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\95596083\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\47866440\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -548,7 +595,11 @@
         "dependencies": {
           "Dapper": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[2.1.15, )"
+=======
+            "version": "[2.1.24, )"
+>>>>>>> 1c48bb2e506cd91931ce7eb84191fafcfcfba5eb
           },
           "System.Data.SqlClient": {
             "target": "Package",
