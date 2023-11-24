@@ -2,23 +2,22 @@
     <div>
         <img src="/img/logo.png" alt="LOGO" style="width: 35%; height: 35%;">
     </div>
-    
         <div class="form-text">Regístrate para más beneficios!</div>
-        
-
     <form action='@Url.Action("Registro","Account")' method="post">
      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label"></label>
+        <label class="form-label"></label>
         <input type="text" class="form-control" id="username" name="nombre" autocomplete="off" placeholder="Nombre de usuario" required>
     </div>
     <div class="mb-3" style="margin-top: -2%">
-     <label for="exampleInputPassword1" class="form-label"></label>
+     <label class="form-label"></label>
      <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
+      <div class="form-text" style="display: flex; justify-content: flex-start;">Nosotros nunca compartiremos tu contraseña.</div>
     </div>
     <div class="mb-3" style="margin-top: -2%">
-     <label for="exampleInputEmail1" class="form-label"></label>
-     <input type="email" class="form-control" id="Mail" aria-describedby="emailHelp" autocomplete="off" placeholder="Mail" required>
-     <div class="form-text" style="display: flex; justify-content: flex-start;">Nosotros nunca compartiremos tu contraseña.</div>
+     <label class="form-label"></label>
+     <input type="email" class="form-control" id="Mail" autocomplete="off" placeholder="Mail" required>
+     <label class="form-label"></label>
+     <input type="file" class="form-control" id="Perfil" accept="image/png" autocomplete="off">
     </div>
     <div class="button">
         <button type="submit" value="Ingresar" class="btn btn-primary" style="width: 60%">Registrarse</button>

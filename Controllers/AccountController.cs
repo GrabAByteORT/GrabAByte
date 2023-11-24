@@ -12,15 +12,17 @@ public class AccountController : Controller
     {
         Usuario user = BD.LevantarUsuario(nombre,contraseña);
         string ret;
+        bool alert = true;
         if(user != null){
-            ret = "IniciarSesion";
+            ret = "Home";
             BD.InicializarUsuario(user);
         }
         else{
             BD.InicializarUsuario();
-            ret = "Home";
+            ret = "IniciarSesion";
+            if(nombre == "default"){alert = false;}
         }
-        return RedirectToAction(ret,"Home");
+        return RedirectToAction(ret,"Home", alert);
     }
     public IActionResult Registro(string nombre,string contrasenia, string email, string foto)
     {

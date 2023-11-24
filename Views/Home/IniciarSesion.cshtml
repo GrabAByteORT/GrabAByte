@@ -11,10 +11,16 @@
      <label class="form-label"></label>
      <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
     </div>
+    @if(ViewBag.User == false)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> El usuario o contraseña es incorrecta.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
         <div class="button">
             <button type="submit" value="Ingresar" class="btn btn-primary" style="width: 50%">Iniciar Sesion</button>
         </div>
     </form>
     <p class="fw-normal" style="margin-top: 2%;">No tienes cuenta? <a href='@Url.Action("Registro","Home")'>Registrate!</a></p> 
-    
 </div>
