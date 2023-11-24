@@ -1,0 +1,11 @@
+<div style="display: flex; flex-direction: row !important; justify-content: center; flex-wrap: wrap; gap: 3vw; margin-top: 4%; margin-bottom: 4%">
+@foreach(Receta rec in ViewBag.ListaRecetas){
+    <a href='@Url.Action("DetalleReceta", "Home", rec)'>
+    <div class="card">
+        <img src="@rec.Img" alt="img" class="imgboxhome"><br>
+        <h3 style="text-decoration: none;">@rec.Nombre</h3>
+    </div>
+    </a>
+}
+
+</div>

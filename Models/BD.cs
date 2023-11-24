@@ -48,20 +48,20 @@ public static class BD
         return ListaIngredientesPorReceta;
     }
 
-    public static List<Receta> LevantarRecetasPorIngrediente(int idIngrediente)
+    public static List<Receta> LevantarRecetasPorIngrediente(string NombreIngrediente)
     {
-        List<Receta> ListaRecetasPorIngrediente = null;
+        List<Receta> ListaRecetasPorIngrediente = new List<Receta>();
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryRecetaPorIngrediente";
-            ListaRecetasPorIngrediente = db.Query<Receta>(sp, new {IDIngrediente = idIngrediente}, commandType: CommandType.StoredProcedure).ToList();
+            ListaRecetasPorIngrediente = db.Query<Receta>(sp, new {NombreIngrediente = NombreIngrediente}, commandType: CommandType.StoredProcedure).ToList();
         }
         return ListaRecetasPorIngrediente;
     }
 
     public static List<Receta> LevantarRecetasPorNombre(string nombre)
     {
-        List<Receta> ListaRecetasPorNombre = null;
+        List<Receta> ListaRecetasPorNombre = new List<Receta>();
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryRecetaPorNombre";

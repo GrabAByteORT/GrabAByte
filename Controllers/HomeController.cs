@@ -82,7 +82,7 @@ public class HomeController : Controller
         ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
         return View();
     }
-    public IActionResult Resultados(string Ingrediente1, string Ingrediente2, string Ingrediente3)
+    public IActionResult ResultadosIng(string Ingrediente1, string Ingrediente2, string Ingrediente3)
     {
         List<string> ingredientes = new List<string>();
         ingredientes.Add(Ingrediente1);
@@ -91,12 +91,18 @@ public class HomeController : Controller
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
-        for(int i = 0; i<ingredientes.Count; i++)
+        List<Receta> ListaRecetas = new List<Receta>();
+        foreach(string ing in ingredientes)
         {
-            ViewBag.ListaRecetas += BD.LevantarRecetasPorIngrediente(ingredientes[i].ID);
+            List<Receta> SubList = BD.LevantarRecetasPorIngrediente(ing);
+            foreach(Receta rec in SubList)
+            {
+                ListaRecetas.Add(rec);
+            }
         }
+        ViewBag.Listarecetas = ListaRecetas;
         
-        return View();
+        return View("Resultados");
     }
     public IActionResult DetalleReceta(Receta rec)
     {

@@ -6,10 +6,12 @@
     <h4>Ingresa aquí algunos ingredientes para tu receta:</h4>
 </div>
 
-<form style="margin-top: 7%; display: flex; justify-content: space-around; align-items: center;" action='@Url.Action("Resultados","Home")'>
-    <input type="text" placeholder="Ingrediente 1" name="Ingrediente1">
-    <input type="text" placeholder="Ingrediente 2" name="Ingrediente2">
-    <input type="text" placeholder="Ingrediente 3" name="Ingrediente3">
+<form style="margin-top: 7%; display: flex; flex-direction: column; justify-content: space-around; align-items: center;" action='@Url.Action("ResultadosIng","Home")'>
+    <div width="20vw">
+        <input type="text" placeholder="Ingrediente 1" name="Ingrediente1">
+        <input type="text" placeholder="Ingrediente 2" name="Ingrediente2">
+        <input type="text" placeholder="Ingrediente 3" name="Ingrediente3">
+    </div>
     <br>
     <input type="submit" class="btn btn-warning">
 </form>
