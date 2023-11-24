@@ -7,5 +7,13 @@
     </div>
     </a>
 }
-
+@if(ViewBag.ListaNula){
+    <div style="text-align: center; margin-top: 8%">
+        <h4>No se encontraron recetas que coincidan con tu búsqueda. Buscá de nuevo!</h4>
+        <div class="button busqueda">
+    <a type="button" class="btn btn-warning" href='@Url.Action("BusquedaIngredientes", "Home")'>Ingredientes</a>
+    <a type="button" class="btn btn-warning" href='@Url.Action("BusquedaRecetas", "Home")'>Receta</a>
+</div>
+    </div>
+}
 </div>

@@ -76,10 +76,13 @@ public class HomeController : Controller
     }
     public IActionResult Resultados(string nombre)
     {
+        List<Receta> ListaRecetas = new List<Receta>();
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
-        ViewBag.ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
+        ListaRecetas = BD.LevantarRecetasPorNombre(nombre);
+        ViewBag.ListaRecetas = ListaRecetas;
+        ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View();
     }
     public IActionResult ResultadosIng(string Ingrediente1, string Ingrediente2, string Ingrediente3)
@@ -100,8 +103,8 @@ public class HomeController : Controller
                 ListaRecetas.Add(rec);
             }
         }
-        ViewBag.Listarecetas = ListaRecetas;
-        
+        ViewBag.Listarecetas = ListaRecetas.Distinct();
+        ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
     }
     public IActionResult DetalleReceta(Receta rec)
