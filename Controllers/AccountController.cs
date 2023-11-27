@@ -12,7 +12,6 @@ public class AccountController : Controller
     {
         Usuario user = BD.LevantarUsuario(nombre,contraseña);
         string ret;
-        bool alert = true;
         if(user != null){
             ret = "Home";
             BD.InicializarUsuario(user);
@@ -20,9 +19,8 @@ public class AccountController : Controller
         else{
             BD.InicializarUsuario();
             ret = "IniciarSesion";
-            if(nombre == "default"){alert = false;}
         }
-        return RedirectToAction(ret,"Home", alert);
+        return RedirectToAction(ret,"Home", true);
     }
     public IActionResult Registro(string nombre,string contrasenia, string email, string foto)
     {
@@ -34,6 +32,7 @@ public class AccountController : Controller
         else
         {
             BD.CrearUsuario(Usu);
+            BD.InicializarUsuario(Usu);
             return RedirectToAction("Home","Home");
         }
     }
@@ -41,13 +40,14 @@ public class AccountController : Controller
     public IActionResult Perfil()
     {
         string ret = null;
+        bool alert = false;
         if(BD.UsuarioIngresado.Nombre != "default"){
             ret = "Perfil";
         }
         else{
             ret = "IniciarSesion";
         }
-        return RedirectToAction(ret,"Home");
+        return RedirectToAction(ret,"Home",alert);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

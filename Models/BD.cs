@@ -106,7 +106,7 @@ public static class BD
         string sp = "CrearUsuario";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(sp, new{Nombre = Usu.Nombre, Contrasenia = Usu.Contrasenia},  commandType: CommandType.StoredProcedure);
+            db.Execute(sp, new{Nombre = Usu.Nombre, Contrasenia = Usu.Contrasenia, Email = Usu.Email, Foto = Usu.Foto},  commandType: CommandType.StoredProcedure);
         }
     }
 

@@ -9,9 +9,9 @@
     </div>
      <div class="mb-3" style="margin-top: -2%">
      <label class="form-label"></label>
-     <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
+     <input type="password" class="form-control" id="contrasenia" name="contraseña" placeholder="Contraseña" required>
     </div>
-    @if(ViewBag.User == false)
+    @if(ViewBag.User == true)
     {
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Error!</strong> El usuario o contraseña es incorrecta.
