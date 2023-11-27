@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "Z:\\2023\\Programacion\\GrabAByte\\GrabAByte.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "Z:\\2023\\Programacion\\GrabAByte\\GrabAByte.csproj",
         "packagesPath": "C:\\Users\\47870976\\.nuget\\packages\\",
         "outputPath": "Z:\\2023\\Programacion\\GrabAByte\\obj\\",
+=======
+    "Z:\\Programación\\GrabAByte\\GrabAByte\\GrabAByte.csproj": {}
+  },
+  "projects": {
+    "Z:\\Programación\\GrabAByte\\GrabAByte\\GrabAByte.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Programación\\GrabAByte\\GrabAByte\\GrabAByte.csproj",
+        "projectName": "GrabAByte",
+        "projectPath": "Z:\\Programación\\GrabAByte\\GrabAByte\\GrabAByte.csproj",
+        "packagesPath": "C:\\Users\\47392040\\.nuget\\packages\\",
+        "outputPath": "Z:\\Programación\\GrabAByte\\GrabAByte\\obj\\",
+>>>>>>> e96d689a07a7a4350df005ee6fd201b37e155ac7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\47870976\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\47392040\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> e96d689a07a7a4350df005ee6fd201b37e155ac7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
