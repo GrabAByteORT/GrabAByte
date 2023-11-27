@@ -1,7 +1,13 @@
 <div>
     <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner">
     <h2>@ViewBag.Receta.Nombre</h2>
-    <p>@ViewBag.Receta.Descripcion</p>
+    <h3>@ViewBag.Receta.Descripcion</h3>
+    <div>
+        <h4>Ingredientes</h4>
+        @foreach(Ingrediente ing in ViewBag.ListaIngredientes){
+            <p>@ing.Nombre</p>
+        }
+    </div>
     <p>@ViewBag.Receta.Pasos</p>
 
 </div>
