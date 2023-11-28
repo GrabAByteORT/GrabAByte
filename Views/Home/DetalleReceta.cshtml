@@ -10,11 +10,15 @@
         }
         </div>
     </div>
-    <p>@ViewBag.Receta.Pasos</p>
+    <div>
+      @foreach(Paso paso in ViewBag.ListaPasos){
+        <p style="margin: 0">@paso.NumPaso. @paso.Text</p>
+      }
+    </div>
 
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ValorarModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ValorarModal" style="margin-top: 3vb">
   Valora esta Receta
 </button>
 
