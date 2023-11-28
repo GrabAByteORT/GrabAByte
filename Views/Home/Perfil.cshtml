@@ -5,76 +5,28 @@
     <h2 class="mt-3">Nombre de Usuario</h2>
   </div>
 
-
-<div class="mt-4">
-  <h3>Tus Favoritas:</h3>
-
-<div style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-
+<h3>Tus Favoritas:</h3>
+<div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
+  @for(int i = 0; i < 4 ;i++){
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
+          <img src="" class="card-img" alt="img">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Receta 1</h5>
-            <p class="card-text">Descripción de la receta 1.</p>
+            <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
+            <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 2</h5>
-            <p class="card-text">Descripción de la receta 2.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 3</h5>
-            <p class="card-text">Descripción de la receta 3.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 4</h5>
-            <p class="card-text">Descripción de la receta 4.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  }
 </div>
 
-<div class="mt-4">
-  <h3>Recetas Creadas:</h3>
-
-<div style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-
+<h3>Tus Creadas:</h3>
+<div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
+  @for(int i = 0; i < 4 ;i++){
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -82,60 +34,14 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Receta 1</h5>
-            <p class="card-text">Descripción de la receta 1.</p>
+            <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
+            <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
           </div>
         </div>
       </div>
     </div>
-
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 2</h5>
-            <p class="card-text">Descripción de la receta 2.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 3</h5>
-            <p class="card-text">Descripción de la receta 3.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Receta 4</h5>
-            <p class="card-text">Descripción de la receta 4.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
+  }
+</div>
  
 
   <div class="text-center mt-4">

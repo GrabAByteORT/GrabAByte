@@ -83,13 +83,25 @@ public static class BD
 
     public static List<Receta> LevantarRecetasGuardadas(int idUsuario)
     {
-        List<Receta> ListaRecetasSegunUsuario = null;
+        List<int> ListaRecetasSegunUsuario = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sp = "QueryGuardados";
-            ListaRecetasSegunUsuario = db.Query<Receta>(sp, new {IDUsuario = idUsuario}, commandType: CommandType.StoredProcedure).ToList();
+            ListaRecetasSegunUsuario = db.Query<int>(sp, new {IDUsuario = idUsuario}, commandType: CommandType.StoredProcedure).ToList();
         }
-        return ListaRecetasSegunUsuario;
+        List<Receta> ListaRecetasGuardadas = new List<Receta>();
+        foreach(int ID in ListaRecetasSegunUsuario){
+            bool encontrado = false;
+            int i = 0;
+            while(!encontrado){
+                if(ListaRecetas[i].ID == ID){
+                    ListaRecetasGuardadas.Add(ListaRecetas[i]);
+                    encontrado = true;
+                }
+                i++;
+            }
+        }
+        return ListaRecetasGuardadas;
     }
 
     public static void IngresarValoracion(Valoracion Val)

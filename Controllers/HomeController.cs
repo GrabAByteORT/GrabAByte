@@ -47,7 +47,8 @@ public class HomeController : Controller
     {
         ViewBag.volverHome = true;
         ViewBag.perfil = false;
-        ViewBag.Usuario = BD.UsuarioIngresado;  
+        ViewBag.Usuario = BD.UsuarioIngresado;
+        ViewBag.Guardadas = BD.LevantarRecetasGuardadas(BD.UsuarioIngresado.ID);
         return View();
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, List<Paso> Pasos, string Img, string Banner, string Desc, string Tipo)
