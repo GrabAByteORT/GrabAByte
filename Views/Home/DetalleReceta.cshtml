@@ -1,9 +1,9 @@
 <div>
-    <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner">
+    <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner" style="margin-bottom: 2%">
     <h2>@ViewBag.Receta.Nombre</h2>
-    <h3>@ViewBag.Receta.Descripcion</h3>
+    <p>@ViewBag.Receta.Descripcion</p>
     <div>
-        <h4>Ingredientes</h4>
+        <p><strong>Ingredientes</strong></p>
         <div style="display: flex">
         @foreach(Ingrediente ing in ViewBag.ListaIngredientes){
             <p style="margin-left: 1vb"><strong>@ing.Nombre</strong></p>
