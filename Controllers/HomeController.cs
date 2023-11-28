@@ -50,12 +50,12 @@ public class HomeController : Controller
         ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
-    public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
+    public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, List<Paso> Pasos, string Img, string Banner, string Desc, string Tipo)
     {
         ViewBag.volverHome = false;
         ViewBag.perfil = false;
-        Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc, Pasos,Tipo);
-        BD.SubirReceta(Rece, ingredientes);
+        Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc,Tipo);
+        BD.SubirReceta(Rece, ingredientes,Pasos);
         return null;
     }
 
@@ -114,6 +114,7 @@ public class HomeController : Controller
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.Receta = rec;
+        ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
         return View();
     }
 
@@ -129,11 +130,22 @@ public class HomeController : Controller
         Receta rec = BD.ListaRecetas[random];
         return RedirectToAction("DetalleReceta","Home", rec);
     }
+<<<<<<< HEAD
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
         Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
         return RedirectToAction();
     }
+=======
+
+
+    public IActionResult LogOut()
+    {
+        BD.InicializarUsuario();
+        return RedirectToAction("Home");
+    }
+
+>>>>>>> 2614d1e15286ad1b04d2ff433af6b67f0d6986fd
     public IActionResult Privacy()  
     {
         return View();

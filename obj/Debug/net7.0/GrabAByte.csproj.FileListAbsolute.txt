@@ -37,6 +37,7 @@ Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.d
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\GrabAByte.genruntimeconfig.cache
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\ref\GrabAByte.dll
+<<<<<<< HEAD
 Z:\Programación\GrabAByte\GrabAByte\bin\Debug\net7.0\appsettings.Development.json
 Z:\Programación\GrabAByte\GrabAByte\bin\Debug\net7.0\appsettings.json
 Z:\Programación\GrabAByte\GrabAByte\bin\Debug\net7.0\GrabAByte.staticwebassets.runtime.json
@@ -115,3 +116,5 @@ Z:\2023\Prog\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.dll
 Z:\2023\Prog\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
 Z:\2023\Prog\GrabAByte\obj\Debug\net7.0\GrabAByte.genruntimeconfig.cache
 Z:\2023\Prog\GrabAByte\obj\Debug\net7.0\ref\GrabAByte.dll
+=======
+>>>>>>> 2614d1e15286ad1b04d2ff433af6b67f0d6986fd
