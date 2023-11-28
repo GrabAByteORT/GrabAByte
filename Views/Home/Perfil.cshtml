@@ -1,8 +1,7 @@
 
 <div class="container mt-5">
   <div class="text-center">
-    <img src="ruta_de_la_foto_de_perfil.jpg" alt="Foto de perfil" class="rounded-circle" style="width: 150px; height: 150px;">
-    <h2 class="mt-3">Nombre de Usuario</h2>
+    <h2 class="mt-3">@ViewBag.Usuario.Nombre</h2>
   </div>
 
 <h3>Tus Favoritas:</h3>
@@ -45,7 +44,7 @@
  
 
   <div class="text-center mt-4">
-    <button class="btn btn-danger">Cerrar Sesión</button>
+    <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
   </div>
 
 </div>

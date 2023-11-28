@@ -6,14 +6,14 @@ public class Valoracion
     public int IDReceta{get;set;}
     public int Puntaje{get;set;}
     public int Dificultad{get;set;}
-    public DateTime Tiempo{get;set;}
+    public int Tiempo{get;set;}
 
     public Valoracion()
     {
 
     }
 
-    public Valoracion(int id, int idreceta, int puntaje, int dificultad, DateTime tiempo)
+    public Valoracion(int id, int idreceta, int puntaje, int dificultad, int tiempo)
     {
         ID = id;
         IDReceta = idreceta;

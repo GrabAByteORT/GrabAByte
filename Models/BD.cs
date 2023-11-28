@@ -109,7 +109,7 @@ public static class BD
         string sp = "IngresarValoracion";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(sp, new {IDReceta = Val.ID, Valoracion = Val.Puntaje}, commandType: CommandType.StoredProcedure);
+            db.Execute(sp, new {IDReceta = Val.IDReceta, Puntaje = Val.Puntaje, Dificultad = Val.Dificultad, Tiempo = Val.Tiempo}, commandType: CommandType.StoredProcedure);
         }
     }
 
