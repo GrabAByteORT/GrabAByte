@@ -130,6 +130,13 @@ public class HomeController : Controller
         return RedirectToAction("DetalleReceta","Home", rec);
     }
 
+
+    public IActionResult LogOut()
+    {
+        BD.InicializarUsuario();
+        return RedirectToAction("Home");
+    }
+
     public IActionResult Privacy()  
     {
         return View();
