@@ -123,7 +123,14 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Sorprendeme(){
+        Random rnd = new Random();
+        int random = rnd.Next(0,(BD.ListaRecetas.Count));
+        Receta rec = BD.ListaRecetas[random];
+        return RedirectToAction("DetalleReceta","Home", rec);
+    }
+
+    public IActionResult Privacy()  
     {
         return View();
     }
