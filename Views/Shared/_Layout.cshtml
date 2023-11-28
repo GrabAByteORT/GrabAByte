@@ -17,10 +17,11 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        
         @if(ViewBag.perfil == true)
         {
             <section>
-                <a href='@Url.Action("Perfil","Account")' class="perfil"> <img src='/img/default.png' alt="imgP"></a>
+                <a href='@Url.Action("Perfil","Account")' class="perfil"> <img src='@BD.UsuarioIngresado.Foto' alt="imgP" style="border-radius: 100%"></a>
             </section>
         }
     </div>
