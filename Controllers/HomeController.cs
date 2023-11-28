@@ -130,6 +130,13 @@ public class HomeController : Controller
         Receta rec = BD.ListaRecetas[random];
         return RedirectToAction("DetalleReceta","Home", rec);
     }
+<<<<<<< HEAD
+    public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
+        Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
+        BD.IngresarValoracion(val);
+        return RedirectToAction();
+    }
+=======
 
 
     public IActionResult LogOut()
@@ -138,6 +145,7 @@ public class HomeController : Controller
         return RedirectToAction("Home");
     }
 
+>>>>>>> 2614d1e15286ad1b04d2ff433af6b67f0d6986fd
     public IActionResult Privacy()  
     {
         return View();

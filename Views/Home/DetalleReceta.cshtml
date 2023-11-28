@@ -30,20 +30,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action='@Url.Action("Valoracion","Home")' method="post">
+            <input type="hidden" name="IDReceta" value="@ViewBag.Receta.ID">
             <label for="Valoracion">Valoracion</label>
-            <input type="range" name="Valoracion" id="Valoracion" style="margin-bottom: 4%;"min="1" max="5">
+            <input type="range" name="Puntaje" id="Puntaje" style="margin-bottom: 4%;"min="1" max="5">
             <br>
             <label for="Dificultad">Dificultad</label>
             <input type="range" name="Dificultad" id="Dificultad" style="margin-bottom: 4%;" min="1" max="5">
             <br>
             <label for="Duracion">Duracion</label>
-            <input type="time" name="Duracion" id="Duracion" style="margin-bottom: 4%;">
-        </form>
+            <input type="Number" name="Tiempo" id="Tiempo">
+            <div class="form-text" style="display: flex; justify-content: flex-start; margin-bottom: 4%;">Ingrese la duracion en minutos.</div>
+            <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="">Save changes</button>
+        </form>
       </div>
     </div>
   </div>
