@@ -50,12 +50,12 @@ public class HomeController : Controller
         ViewBag.Usuario = BD.UsuarioIngresado;  
         return View();
     }
-    public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, string Img, string Banner, string Pasos, string Desc, string Tipo)
+    public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, List<Paso> Pasos, string Img, string Banner, string Desc, string Tipo)
     {
         ViewBag.volverHome = false;
         ViewBag.perfil = false;
-        Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc, Pasos,Tipo);
-        BD.SubirReceta(Rece, ingredientes);
+        Receta Rece = new Receta(NombreReceta, DateTime.Today, Desc,Tipo);
+        BD.SubirReceta(Rece, ingredientes,Pasos);
         return null;
     }
 
@@ -114,6 +114,7 @@ public class HomeController : Controller
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         ViewBag.Receta = rec;
+        ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
         return View();
     }
 

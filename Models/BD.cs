@@ -110,18 +110,34 @@ public static class BD
         }
     }
 
-    public static void SubirReceta(Receta Rece, List<Ingrediente> Ingrediente)
+    public static void SubirReceta(Receta Rece, List<Ingrediente> Ingrediente, List<Paso> Pasos)
     {
         string sp = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             sp = "SubirReceta";
-            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Pasos = Rece.Pasos, Tipo = Rece.Tipo, Img = Rece.Img, Banner = Rece.Banner});
+            db.Execute(sp, new{Nombre = Rece.Nombre, FechaPublicacion = Rece.FechaPublicacion, Descripcion = Rece.Descripcion, Tipo = Rece.Tipo, Img = Rece.Img, Banner = Rece.Banner});
             sp = "SubirIngrediente";
             for(int i = 0; i > Ingrediente.Count; i++)
             {
                 db.Execute(sp, new{NombreIngrediente = Ingrediente[i].Nombre, IDReceta = Rece.ID});
             }
+            sp = "IngresarPasosReceta";
+            for(int i = 0; i > Pasos.Count; i++)
+            {
+                db.Execute(sp, new{IDReceta = Rece.ID, NumPaso = Pasos[i].NumPaso, Text = Pasos[i].Text});
+            }
         }
+    }
+
+    public static List<Paso> LevantarPasosPorReceta(int IDReceta)
+    {
+        List<Paso> ListaPasosPorReceta = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "QueryPasosReceta";
+            ListaPasosPorReceta = db.Query<Paso>(sp, new {IDReceta = IDReceta}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return ListaPasosPorReceta;
     }
 }
