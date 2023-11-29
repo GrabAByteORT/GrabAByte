@@ -1,54 +1,53 @@
-
 <div class="container mt-5">
   <div class="text-center">
     <h2 class="mt-3">@ViewBag.Usuario.Nombre</h2>
   </div>
-
-<h3>Tus Favoritas:</h3>
-<div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-  @for(int i = 0; i < 4 ;i++){
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
-            <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
+</div>
+@if(Enumerable.Count(@ViewBag.Guardadas) > 4)
+{
+  <h3>Tus Favoritas:</h3>
+  <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
+    @for(int i = 0; i < Enumerable.Count(@ViewBag.Guardadas);i++){
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="" class="card-img" alt="img">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
+              <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  }
-</div>
-
-<h3>Tus Creadas:</h3>
-<div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-  @for(int i = 0; i < 4 ;i++){
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="#" class="card-img" alt="img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
-            <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  }
-</div>
- 
-
-  <div class="text-center mt-4">
-    <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
+    }
   </div>
 
-</div>
+  <h3>Tus Creadas:</h3>
+  <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
+    @for(int i = 0; i < Enumerable.Count(@ViewBag.Guardadas);i++){
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="#" class="card-img" alt="img">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
+              <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+  
 
+    <div class="text-center mt-4">
+      <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
+    </div>
+}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RecetaModal">
   Subir Receta
 </button>
