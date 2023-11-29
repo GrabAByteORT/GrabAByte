@@ -49,6 +49,7 @@ public class HomeController : Controller
         ViewBag.perfil = false;
         ViewBag.Usuario = BD.UsuarioIngresado;
         ViewBag.Guardadas = BD.LevantarRecetasGuardadas(BD.UsuarioIngresado.ID);
+        ViewBag.Creadas = BD.LevantarRecetasCreadas(BD.UsuarioIngresado.ID); 
         return View();
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, List<Paso> Pasos, string Img, string Banner, string Desc, string Tipo)
@@ -114,11 +115,20 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        ViewBag.IDUsuario = BD.UsuarioIngresado.ID;
         ViewBag.Receta = rec;
         ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
         return View();
     }
-
+     public IActionResult DetalleRecetaID(int id)
+     {
+        Receta rec = new Receta();
+        foreach(Receta element in BD.ListaRecetas)
+        {
+            if(element.ID == id){rec = element;}
+        }
+        return RedirectToAction("DetalleReceta","Home",rec);
+     }
     public IActionResult Creditos(){
         ViewBag.perfil = true;
         ViewBag.volverHome = true;

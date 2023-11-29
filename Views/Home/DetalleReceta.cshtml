@@ -2,6 +2,12 @@
     <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner" style="margin-bottom: 2%">
     <h2>@ViewBag.Receta.Nombre</h2>
     <p>@ViewBag.Receta.Descripcion</p>
+    <form action='@Url.Action("GuardarReceta","Account")'>
+      <input type="hidden" name="rec" id="IDReceta" value=@ViewBag.Receta.ID>
+      <input type="hidden" name="IDUsuario" value="@ViewBag.IDUsuario">
+      <button type="submit" class="btn btn-primary" style="display:flex">Guardar</button>
+    </form>
+    
     <div>
         <p><strong>Ingredientes</strong></p>
         <div style="display: flex">

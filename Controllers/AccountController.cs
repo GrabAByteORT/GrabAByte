@@ -50,6 +50,11 @@ public class AccountController : Controller
         return RedirectToAction(ret,"Home",alert);
     }
 
+    public IActionResult GuardarReceta(int IDReceta, int IDUsuario){
+        BD.GuardarReceta(IDUsuario, IDReceta);
+        return RedirectToAction("DetalleRecetaID", "Home");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
