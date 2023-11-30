@@ -26,6 +26,7 @@ else
 {
   <h1>No tenes recetas guardadas</h1>
 }
+<!--
 @if(@ViewBag.Creadas.Count > 0){
   <h3>Tus Favoritas:</h3>
   <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%"></div>
@@ -48,16 +49,15 @@ else
 else
 {
   <h1>No tenes recetas creadas</h1>
-}
+}-->
 <div class="text-center mt-4">
   <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
 </div>
-
+<!--
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RecetaModal">
   Subir Receta
 </button>
-
-
+ Esto era el modal de subir receta
 <div class="modal fade" id="RecetaModal" tabindex="-1" aria-labelledby="RecetaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -75,9 +75,6 @@ else
             <br>
             <label for="Banner">Banner</label>
             <input type="file" name="Banner" id="Banner" style="margin-bottom: 4%">
-            <br>
-            <label for="Pasos">Pasos</label>
-            <input type="text" name="Pasos" id="Pasos" style="margin-bottom: 4%">
             <br>
             <label for="Descripcion">Descripcion</label>
             <input type="text" name="Descripcion" id="Descripcion" style="margin-bottom: 4%">
@@ -103,3 +100,4 @@ else
     </div>
   </div>
 </div>
+-->

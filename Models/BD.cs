@@ -173,5 +173,15 @@ public static class BD
         }
         
     }
+    
+    public static Receta RecetaPorID(int IDReceta)
+    {
+        Receta rec = new Receta();
+        foreach(Receta rece in ListaRecetas)
+        {
+            if(rece.ID == IDReceta){rec = rece;}
+        }
+        return rec;
+    }
 
 }

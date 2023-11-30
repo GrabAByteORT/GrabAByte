@@ -105,16 +105,16 @@ public class HomeController : Controller
                 bool esta = false;
                 foreach(Receta rece in ListaRecetas)
                 {
-                    if(rece.id =! rec.id)
+                    if(rece.ID == rec.ID)
                     {
                         esta = true;
                     }
                 }
-                if(esta)
+                if(!esta)
                 {
                     ListaRecetas.Add(rec);
                 }
-                
+
             }
         }
         

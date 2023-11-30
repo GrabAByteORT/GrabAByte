@@ -3,7 +3,7 @@
     <h2>@ViewBag.Receta.Nombre</h2>
     <p>@ViewBag.Receta.Descripcion</p>
     <form action='@Url.Action("GuardarReceta","Account")'>
-      <input type="hidden" name="rec" id="IDReceta" value=@ViewBag.Receta.ID>
+      <input type="hidden" name="IDReceta" id="IDReceta" value=@ViewBag.Receta.ID>
       <input type="hidden" name="IDUsuario" value="@ViewBag.IDUsuario">
       <button type="submit" class="btn btn-primary" style="display:flex">Guardar</button>
     </form>
