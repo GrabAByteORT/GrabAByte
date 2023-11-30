@@ -102,9 +102,22 @@ public class HomeController : Controller
             List<Receta> SubList = BD.LevantarRecetasPorIngrediente(ing);
             foreach(Receta rec in SubList)
             {
-                ListaRecetas.Add(rec);
+                bool esta = false;
+                foreach(Receta rece in ListaRecetas)
+                {
+                    if(rece.id =! rec.id)
+                    {
+                        esta = true;
+                    }
+                }
+                if(esta)
+                {
+                    ListaRecetas.Add(rec);
+                }
+                
             }
         }
+        
         ViewBag.Listarecetas = ListaRecetas.Distinct();
         ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
