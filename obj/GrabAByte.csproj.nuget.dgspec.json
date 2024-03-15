@@ -46,11 +46,11 @@
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.1.24, )"
+              "version": "[2.1.35, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[4.8.6, )"
             }
           },
           "imports": [

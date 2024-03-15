@@ -60,7 +60,7 @@ public class AccountController : Controller
         {
             BD.GuardarReceta(IDUsuario, IDReceta);
         }
-        return RedirectToAction("DetalleRecetaAlerta", "Home", BD.RecetaPorID(IDReceta));
+        return RedirectToAction("DetalleRecetaAlerta", "Home", IDReceta);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -122,8 +122,9 @@ public class HomeController : Controller
         ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
     }
-    public IActionResult DetalleReceta(Receta rec)
+    public IActionResult DetalleReceta(int IDReceta)
     {
+        Receta rec = BD.RecetaPorID(IDReceta);
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
@@ -134,8 +135,9 @@ public class HomeController : Controller
         ViewBag.AlertGuardado = false;
         return View();
     }
-    public IActionResult DetalleRecetaAlerta(Receta rec)
+    public IActionResult DetalleRecetaAlerta(int IDReceta)
     {
+        Receta rec = BD.RecetaPorID(IDReceta);
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
@@ -156,12 +158,12 @@ public class HomeController : Controller
         Random rnd = new Random();
         int random = rnd.Next(0,(BD.ListaRecetas.Count));
         Receta rec = BD.ListaRecetas[random];
-        return RedirectToAction("DetalleReceta","Home", new {rec = rec, alertGuardado = false});
+        return RedirectToAction("DetalleReceta","Home", rec.ID);
     }
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
         Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
-        return RedirectToAction();
+        return RedirectToAction("DetalleReceta","Home", IDReceta);
     }
     public IActionResult LogOut()
     {
