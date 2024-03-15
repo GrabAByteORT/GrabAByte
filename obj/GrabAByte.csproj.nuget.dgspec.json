@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ort\\Programacion\\GrabAByte\\GrabAByte.csproj": {}
+    "Z:\\2023\\Programacion\\GrabAByteFinal\\GrabAByte\\GrabAByte.csproj": {}
   },
   "projects": {
-    "D:\\Ort\\Programacion\\GrabAByte\\GrabAByte.csproj": {
+    "Z:\\2023\\Programacion\\GrabAByteFinal\\GrabAByte\\GrabAByte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ort\\Programacion\\GrabAByte\\GrabAByte.csproj",
+        "projectUniqueName": "Z:\\2023\\Programacion\\GrabAByteFinal\\GrabAByte\\GrabAByte.csproj",
         "projectName": "GrabAByte",
-        "projectPath": "D:\\Ort\\Programacion\\GrabAByte\\GrabAByte.csproj",
-        "packagesPath": "C:\\Users\\Julian\\.nuget\\packages\\",
-        "outputPath": "D:\\Ort\\Programacion\\GrabAByte\\obj\\",
+        "projectPath": "Z:\\2023\\Programacion\\GrabAByteFinal\\GrabAByte\\GrabAByte.csproj",
+        "packagesPath": "C:\\Users\\47870976\\.nuget\\packages\\",
+        "outputPath": "Z:\\2023\\Programacion\\GrabAByteFinal\\GrabAByte\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Julian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\47870976\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
