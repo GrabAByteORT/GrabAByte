@@ -97,10 +97,43 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         List<Receta> ListaRecetas = new List<Receta>();
-        foreach(string ing in ingredientes)
+        List<Receta> SubListOut = new List<Receta>();
+        List<Receta> ListaRecetasRepetidas = new List<Receta>();
+        for (int i = 0; i < ingredientes.Count(); i++)
         {
-            List<Receta> SubList = BD.LevantarRecetasPorIngrediente(ing);
-            foreach(Receta rec in SubList)
+            List<Receta> SubList = new List<Receta>();
+            List<Receta> ListaResult = BD.LevantarRecetasPorIngrediente(ingredientes[i]);
+            foreach (Receta rec in ListaResult)
+            {
+                SubList.Add(rec);
+            }
+            if(i == 0)
+            {
+                SubListOut = SubList;
+                ListaRecetasRepetidas = SubList;
+            }
+            else
+            {
+                for (int j = 0; j < SubListOut.Count(); j++)
+                {
+                
+                    bool esta = false;
+                    foreach(Receta rece in SubList)
+                    {
+                    if(rece.ID == SubListOut[j].ID)
+                    {
+                        esta = true;
+                    }
+                    }
+                    if(!esta)
+                    {
+                        ListaRecetasRepetidas.Remove(SubListOut[j]);
+                    }
+                }
+            }
+        }
+        
+        foreach(Receta rec in ListaRecetasRepetidas)
             {
                 bool esta = false;
                 foreach(Receta rece in ListaRecetas)
@@ -116,8 +149,6 @@ public class HomeController : Controller
                 }
 
             }
-        }
-        
         ViewBag.Listarecetas = ListaRecetas.Distinct();
         ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
