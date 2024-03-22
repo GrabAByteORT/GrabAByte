@@ -89,7 +89,20 @@ public class HomeController : Controller
     }
     public IActionResult ResultadosIng(string Ingrediente1, string Ingrediente2, string Ingrediente3)
     {
+        int cantIngredientes = 0;
         List<string> ingredientes = new List<string>();
+        if(Ingrediente1 != null)
+        {
+            cantIngredientes++;
+        }
+        if(Ingrediente2 != null)
+        {
+            cantIngredientes++;
+        }
+        if(Ingrediente3 != null)
+        {
+            cantIngredientes++;
+        }
         ingredientes.Add(Ingrediente1);
         ingredientes.Add(Ingrediente2);
         ingredientes.Add(Ingrediente3);
@@ -97,58 +110,46 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         List<Receta> ListaRecetas = new List<Receta>();
-        List<Receta> SubListOut = new List<Receta>();
-        List<Receta> ListaRecetasRepetidas = new List<Receta>();
-        for (int i = 0; i < ingredientes.Count(); i++)
+        List<Receta> SubList = new List<Receta>();
+        for (int i = 0; i < ingredientes.Count(); i++) //por cada ing
         {
-            List<Receta> SubList = new List<Receta>();
+            
             List<Receta> ListaResult = BD.LevantarRecetasPorIngrediente(ingredientes[i]);
             foreach (Receta rec in ListaResult)
             {
                 SubList.Add(rec);
             }
-            if(i == 0)
+        }
+        List<int> ListaIDs = new List<int>();
+        foreach(Receta rec in SubList)
+        {
+            ListaIDs.Add(rec.ID);
+            
+        }
+        List<int> ListaApariciones = new List<int>();
+        Dictionary<int,int> dicApariciones = new Dictionary<int, int>();
+        for(int i = 0; i <= ListaIDs.Count(); i++)
+        {
+            int j = 0;
+            int pos = 0;
+            while(pos != -1)
             {
-                SubListOut = SubList;
-                ListaRecetasRepetidas = SubList;
-            }
-            else
-            {
-                for (int j = 0; j < SubListOut.Count(); j++)
+                pos = ListaIDs.IndexOf(i);
+                if(pos != -1)
                 {
-                
-                    bool esta = false;
-                    foreach(Receta rece in SubList)
-                    {
-                    if(rece.ID == SubListOut[j].ID)
-                    {
-                        esta = true;
-                    }
-                    }
-                    if(!esta)
-                    {
-                        ListaRecetasRepetidas.Remove(SubListOut[j]);
-                    }
+                    ListaIDs[pos]= -1;
+                    j++;
                 }
+            }
+            dicApariciones.Add(i,j);
+        }
+        foreach(KeyValuePair<int,int> receta in dicApariciones)
+        {
+            if(receta.Value > cantIngredientes)
+            {
+                ListaRecetas.Add(BD.RecetaPorID(receta.Key));
             }
         }
-        
-        foreach(Receta rec in ListaRecetasRepetidas)
-            {
-                bool esta = false;
-                foreach(Receta rece in ListaRecetas)
-                {
-                    if(rece.ID == rec.ID)
-                    {
-                        esta = true;
-                    }
-                }
-                if(!esta)
-                {
-                    ListaRecetas.Add(rec);
-                }
-
-            }
         ViewBag.Listarecetas = ListaRecetas.Distinct();
         ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
