@@ -49,6 +49,19 @@ public class AccountController : Controller
         }
         return RedirectToAction(ret,"Home",alert);
     }
+    public IActionResult GuardarReceta(int IDReceta, int IDUsuario){
+        List<Receta> Guardadas = BD.LevantarRecetasGuardadas(IDUsuario);
+        bool esta = false;
+        foreach(Receta rec in Guardadas)
+        {
+            if(rec.ID == IDReceta){esta = true;}
+        }
+        if(!esta)
+        {
+            BD.GuardarReceta(IDUsuario, IDReceta);
+        }
+        return RedirectToAction("DetalleRecetaAlerta", "Home", IDReceta);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

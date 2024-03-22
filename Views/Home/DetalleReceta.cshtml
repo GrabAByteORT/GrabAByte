@@ -2,6 +2,26 @@
     <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner" style="margin-bottom: 2%">
     <h2>@ViewBag.Receta.Nombre</h2>
     <p>@ViewBag.Receta.Descripcion</p>
+    <div style="display: flex; align-items: center; ">
+    @if (ViewBag.Usuario.Nombre == "default")
+    {
+      <form action='@Url.Action("Perfil","Account")'>
+      <button type="submit" class="btn btn-primary" style="display:flex">Guardar</button>
+      </form>
+    }
+    else
+    {
+      <form action='@Url.Action("GuardarReceta","Account")'>
+      <input type="hidden" name="IDReceta" id="IDReceta" value=@ViewBag.Receta.ID>
+      <input type="hidden" name="IDUsuario" value="@ViewBag.IDUsuario">
+      <button type="submit" class="btn btn-primary" style="display:flex">Guardar</button>
+    </form>
+    }
+    @if(ViewBag.AlertGuardado){
+      <div class="alert alert-info" role="alert" style="width: 70%; margin-left: 3vb; margin-top: 1.5vb;"> Receta Guardada! </div>
+    }
+    </div>
+    
     <div>
         <p><strong>Ingredientes</strong></p>
         <div style="display: flex">

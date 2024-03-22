@@ -49,6 +49,7 @@ public class HomeController : Controller
         ViewBag.perfil = false;
         ViewBag.Usuario = BD.UsuarioIngresado;
         ViewBag.Guardadas = BD.LevantarRecetasGuardadas(BD.UsuarioIngresado.ID);
+        ViewBag.Creadas = BD.LevantarRecetasCreadas(BD.UsuarioIngresado.ID); 
         return View();
     }
     public IActionResult ModalSubirReceta(string NombreReceta, List<Ingrediente> ingredientes, List<Paso> Pasos, string Img, string Banner, string Desc, string Tipo)
@@ -96,6 +97,7 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         List<Receta> ListaRecetas = new List<Receta>();
+<<<<<<< HEAD
         List<Receta> SubList = new List<Receta>();
         List<string> RecetasAgregadas = new List<string>();
         int i = 0;
@@ -113,23 +115,90 @@ public class HomeController : Controller
             foreach(Receta rec in SubList)
             {
                 ListaRecetas.Add(rec); 
+=======
+        List<Receta> SubListOut = new List<Receta>();
+        List<Receta> ListaRecetasRepetidas = new List<Receta>();
+        for (int i = 0; i < ingredientes.Count(); i++)
+        {
+            List<Receta> SubList = new List<Receta>();
+            List<Receta> ListaResult = BD.LevantarRecetasPorIngrediente(ingredientes[i]);
+            foreach (Receta rec in ListaResult)
+            {
+                SubList.Add(rec);
+            }
+            if(i == 0)
+            {
+                SubListOut = SubList;
+                ListaRecetasRepetidas = SubList;
+            }
+            else
+            {
+                for (int j = 0; j < SubListOut.Count(); j++)
+                {
+                
+                    bool esta = false;
+                    foreach(Receta rece in SubList)
+                    {
+                    if(rece.ID == SubListOut[j].ID)
+                    {
+                        esta = true;
+                    }
+                    }
+                    if(!esta)
+                    {
+                        ListaRecetasRepetidas.Remove(SubListOut[j]);
+                    }
+                }
+>>>>>>> 6ee7db8b36339256718c14aeb349822dd3e1ac24
             }
         }
+        
+        foreach(Receta rec in ListaRecetasRepetidas)
+            {
+                bool esta = false;
+                foreach(Receta rece in ListaRecetas)
+                {
+                    if(rece.ID == rec.ID)
+                    {
+                        esta = true;
+                    }
+                }
+                if(!esta)
+                {
+                    ListaRecetas.Add(rec);
+                }
+
+            }
         ViewBag.Listarecetas = ListaRecetas.Distinct();
         ViewBag.ListaNula = ListaRecetas.Count()==0;
         return View("Resultados");
     }
-    public IActionResult DetalleReceta(Receta rec)
+    public IActionResult DetalleReceta(int IDReceta)
     {
+        Receta rec = BD.RecetaPorID(IDReceta);
         ViewBag.volverHome = true;
         ViewBag.perfil = true;
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
-        ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
+        ViewBag.Usuario = BD.UsuarioIngresado;
+        ViewBag.IDUsuario = BD.UsuarioIngresado.ID;
         ViewBag.Receta = rec;
         ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
+        ViewBag.AlertGuardado = false;
         return View();
     }
-
+    public IActionResult DetalleRecetaAlerta(int IDReceta)
+    {
+        Receta rec = BD.RecetaPorID(IDReceta);
+        ViewBag.volverHome = true;
+        ViewBag.perfil = true;
+        ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
+        ViewBag.Usuario = BD.UsuarioIngresado;
+        ViewBag.IDUsuario = BD.UsuarioIngresado.ID;
+        ViewBag.Receta = rec;
+        ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
+        ViewBag.AlertGuardado = true;
+        return View("DetalleReceta");
+    }
     public IActionResult Creditos(){
         ViewBag.perfil = true;
         ViewBag.volverHome = true;
@@ -140,12 +209,12 @@ public class HomeController : Controller
         Random rnd = new Random();
         int random = rnd.Next(0,(BD.ListaRecetas.Count));
         Receta rec = BD.ListaRecetas[random];
-        return RedirectToAction("DetalleReceta","Home", rec);
+        return RedirectToAction("DetalleReceta","Home", rec.ID);
     }
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
         Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
-        return RedirectToAction();
+        return RedirectToAction("DetalleReceta","Home", IDReceta);
     }
     public IActionResult LogOut()
     {

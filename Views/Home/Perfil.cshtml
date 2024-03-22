@@ -1,13 +1,32 @@
 <div class="container mt-5">
   <div class="text-center">
+    <img src="@ViewBag.Usuario.Foto" alt="Foto" style="border-radius: 100%; width: 12vb;">
     <h2 class="mt-3">@ViewBag.Usuario.Nombre</h2>
   </div>
 </div>
-@if(Enumerable.Count(@ViewBag.Guardadas) > 4)
-{
+@if(@ViewBag.Guardadas.Count > 0){
   <h3>Tus Favoritas:</h3>
-  <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-    @for(int i = 0; i < Enumerable.Count(@ViewBag.Guardadas);i++){
+  <div class="mt-4" style="display: flex; flex-direction: row; margin-top: 3%; margin-bottom: 3%; align-items: center;">
+    @foreach (Receta rec in ViewBag.Guardadas)
+    {
+      <a href='@Url.Action("DetalleReceta", "Home", rec)'>
+      <div class="card" style="margin-left: 3vb">
+        <img src="@rec.Img" alt="img" class="imgboxhome"><br>
+        <h3 style="text-decoration: none;">@rec.Nombre</h3>
+      </div>
+      </a>
+    }
+  </div>
+}
+else
+{
+  <h1>No tenes recetas guardadas</h1>
+}
+<!--
+@if(@ViewBag.Creadas.Count > 0){
+  <h3>Tus Favoritas:</h3>
+  <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%"></div>
+    @for(int i = 0; i < @ViewBag.Creadas.Count;i++){
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -15,44 +34,26 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
-              <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
+              <h5 class="card-title">@ViewBag.Creadas[i].Nombre</h5>
+              <p class="card-text">@ViewBag.Creadas[i].Descripcion</p>
             </div>
           </div>
         </div>
       </div>
     }
-  </div>
-
-  <h3>Tus Creadas:</h3>
-  <div class="mt-4"  style="display: flex; flex-direction: row; margin-top: 3%; justify-content: space-between; margin-bottom: 3%">
-    @for(int i = 0; i < Enumerable.Count(@ViewBag.Guardadas);i++){
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="#" class="card-img" alt="img">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">@ViewBag.Guardadas[i].Nombre</h5>
-              <p class="card-text">@ViewBag.Guardadas[i].Descripcion</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
-  </div>
-  
-
-    <div class="text-center mt-4">
-      <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
-    </div>
 }
+else
+{
+  <h1>No tenes recetas creadas</h1>
+}-->
+<div class="text-center mt-4">
+  <a class="btn btn-danger" href='@Url.Action("LogOut","Home")'>Cerrar Sesión</a>
+</div>
+<!--
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RecetaModal">
   Subir Receta
 </button>
-
-
+ Esto era el modal de subir receta
 <div class="modal fade" id="RecetaModal" tabindex="-1" aria-labelledby="RecetaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -70,9 +71,6 @@
             <br>
             <label for="Banner">Banner</label>
             <input type="file" name="Banner" id="Banner" style="margin-bottom: 4%">
-            <br>
-            <label for="Pasos">Pasos</label>
-            <input type="text" name="Pasos" id="Pasos" style="margin-bottom: 4%">
             <br>
             <label for="Descripcion">Descripcion</label>
             <input type="text" name="Descripcion" id="Descripcion" style="margin-bottom: 4%">
@@ -98,3 +96,4 @@
     </div>
   </div>
 </div>
+-->

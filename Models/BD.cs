@@ -152,4 +152,36 @@ public static class BD
         }
         return ListaPasosPorReceta;
     }
+
+    public static List<Receta> LevantarRecetasCreadas(int IDUsuario)
+    {
+        List<Receta> ListaRecetasCreadas = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "QueryRecetasCreadas";
+            ListaRecetasCreadas = db.Query<Receta>(sp, new {IDUsuario = IDUsuario}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return ListaRecetasCreadas;
+    }
+
+    public static void GuardarReceta(int IDUsuario, int IDReceta)
+    {
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "GuardarReceta";
+            db.Execute(sp, new {IDUsuario = IDUsuario, IDReceta = IDReceta}, commandType: CommandType.StoredProcedure);
+        }
+        
+    }
+    
+    public static Receta RecetaPorID(int IDReceta)
+    {
+        Receta rec = new Receta();
+        foreach(Receta rece in ListaRecetas)
+        {
+            if(rece.ID == IDReceta){rec = rece;}
+        }
+        return rec;
+    }
+
 }
