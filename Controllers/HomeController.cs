@@ -97,25 +97,6 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         List<Receta> ListaRecetas = new List<Receta>();
-<<<<<<< HEAD
-        List<Receta> SubList = new List<Receta>();
-        List<string> RecetasAgregadas = new List<string>();
-        int i = 0;
-        foreach(string ing in ingredientes)
-        {
-            do
-            {
-                
-                    SubList = BD.LevantarRecetasPorIngrediente(ing);
-                
-                i++;
-            }while(i < ingredientes.Count && SubList[i-1] != SubList[i]);
-            
-            
-            foreach(Receta rec in SubList)
-            {
-                ListaRecetas.Add(rec); 
-=======
         List<Receta> SubListOut = new List<Receta>();
         List<Receta> ListaRecetasRepetidas = new List<Receta>();
         for (int i = 0; i < ingredientes.Count(); i++)
@@ -149,7 +130,6 @@ public class HomeController : Controller
                         ListaRecetasRepetidas.Remove(SubListOut[j]);
                     }
                 }
->>>>>>> 6ee7db8b36339256718c14aeb349822dd3e1ac24
             }
         }
         
@@ -212,7 +192,7 @@ public class HomeController : Controller
         return RedirectToAction("DetalleReceta","Home", rec.ID);
     }
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
-        Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
+        Valoracion val = new Valoracion(IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
         return RedirectToAction("DetalleReceta","Home", IDReceta);
     }

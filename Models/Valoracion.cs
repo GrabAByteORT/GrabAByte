@@ -21,4 +21,12 @@ public class Valoracion
         Dificultad = dificultad;
         Tiempo = tiempo;
     }
+
+    public Valoracion(int idreceta, int puntaje, int dificultad, int tiempo)
+    {
+        IDReceta = idreceta;
+        Puntaje = puntaje;
+        Dificultad = dificultad;
+        Tiempo = tiempo;
+    }
 }
