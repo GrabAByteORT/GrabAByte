@@ -193,7 +193,7 @@ public class HomeController : Controller
         return RedirectToAction("DetalleReceta","Home", rec.ID);
     }
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
-        Valoracion val = new Valoracion(0,IDReceta, Puntaje, Dificultad, Tiempo);
+        Valoracion val = new Valoracion(IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
         return RedirectToAction("DetalleReceta","Home", IDReceta);
     }
