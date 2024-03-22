@@ -96,12 +96,23 @@ public class HomeController : Controller
         ViewBag.perfil = true;
         ViewBag.FotoDePerfil = BD.UsuarioIngresado.Foto;
         List<Receta> ListaRecetas = new List<Receta>();
+        List<Receta> SubList = new List<Receta>();
+        List<string> RecetasAgregadas = new List<string>();
+        int i = 0;
         foreach(string ing in ingredientes)
         {
-            List<Receta> SubList = BD.LevantarRecetasPorIngrediente(ing);
+            do
+            {
+                
+                    SubList = BD.LevantarRecetasPorIngrediente(ing);
+                
+                i++;
+            }while(i < ingredientes.Count && SubList[i-1] != SubList[i]);
+            
+            
             foreach(Receta rec in SubList)
             {
-                ListaRecetas.Add(rec);
+                ListaRecetas.Add(rec); 
             }
         }
         ViewBag.Listarecetas = ListaRecetas.Distinct();
