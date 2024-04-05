@@ -190,12 +190,12 @@ public class HomeController : Controller
         Random rnd = new Random();
         int random = rnd.Next(0,(BD.ListaRecetas.Count));
         Receta rec = BD.ListaRecetas[random];
-        return RedirectToAction("DetalleReceta","Home", rec.ID);
+        return RedirectToAction("DetalleReceta","Home", new {IDReceta = rec.ID});
     }
     public IActionResult Valoracion(int IDReceta, int Puntaje, int Dificultad, int Tiempo){
         Valoracion val = new Valoracion(IDReceta, Puntaje, Dificultad, Tiempo);
         BD.IngresarValoracion(val);
-        return RedirectToAction("DetalleReceta","Home", IDReceta);
+        return RedirectToAction("DetalleReceta","Home", new {IDReceta = IDReceta});
     }
     public IActionResult LogOut()
     {

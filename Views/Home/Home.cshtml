@@ -3,7 +3,7 @@
 </div>
 <div style="display: flex; flex-direction: row !important; justify-content: center; gap: 3vw; margin-top: 4%; margin-bottom: 4%">
 @foreach(Receta rec in ViewBag.RecetasDestacadas){
-    <a href='@Url.Action("DetalleReceta", "Home", rec)'>
+    <a href='@Url.Action("DetalleReceta", "Home", new {IDReceta = rec.ID})'>
     <div class="card">
         <img src="@rec.Img" alt="img" class="imgboxhome"><br>
         <h3 style="text-decoration: none;">@rec.Nombre</h3>

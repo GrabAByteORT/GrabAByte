@@ -9,7 +9,7 @@
   <div class="mt-4" style="display: flex; flex-direction: row; margin-top: 3%; margin-bottom: 3%; align-items: center;">
     @foreach (Receta rec in ViewBag.Guardadas)
     {
-      <a href='@Url.Action("DetalleReceta", "Home", rec)'>
+      <a href='@Url.Action("DetalleReceta", "Home", new {IDReceta = rec.ID})'>
       <div class="card" style="margin-left: 3vb">
         <img src="@rec.Img" alt="img" class="imgboxhome"><br>
         <h3 style="text-decoration: none;">@rec.Nombre</h3>
