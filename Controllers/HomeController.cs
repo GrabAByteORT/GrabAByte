@@ -165,6 +165,30 @@ public class HomeController : Controller
         ViewBag.Receta = rec;
         ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
         ViewBag.AlertGuardado = false;
+        List<Valoracion>ListaValoraciones = BD.LevantarValoracionPorReceta(rec.ID);
+        double sumatiempo = 0;
+        double sumapuntaje = 0;
+        double sumadificultad = 0;
+        int i = 0;
+        foreach (Valoracion val in ListaValoraciones)
+        {
+            sumatiempo += val.Tiempo;
+            sumapuntaje += val.Puntaje;
+            sumadificultad += val.Dificultad;
+            i++;
+        }
+        if (i != 0)
+        {
+            ViewBag.Puntaje = sumapuntaje/i;
+            ViewBag.Dificultad = sumadificultad/i;
+            ViewBag.Tiempo = sumatiempo/i;
+            ViewBag.MostrarVal = true;  
+        }
+        else
+        {
+            ViewBag.MostrarVal = false;
+        }
+
         return View();
     }
     public IActionResult DetalleRecetaAlerta(int IDReceta)

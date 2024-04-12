@@ -59,6 +59,17 @@ public static class BD
         return ListaRecetasPorIngrediente;
     }
 
+    public static List<Valoracion> LevantarValoracionPorReceta(int IDReceta)
+    {
+        List<Valoracion> ListaValoracionesPorRecetas = new List<Valoracion>();
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sp = "QueryValoracionPorReceta";
+            ListaValoracionesPorRecetas = db.Query<Valoracion>(sp, new {IDReceta = IDReceta}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return ListaValoracionesPorRecetas;
+    }
+
     public static List<Receta> LevantarRecetasPorNombre(string nombre)
     {
         List<Receta> ListaRecetasPorNombre = new List<Receta>();

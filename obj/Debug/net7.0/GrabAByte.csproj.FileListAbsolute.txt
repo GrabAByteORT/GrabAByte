@@ -31,7 +31,6 @@ Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\staticwebassets.development.json
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\scopedcss\bundle\GrabAByte.styles.css
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\scopedcss\projectbundle\GrabAByte.bundle.scp.css
-Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\GrabAByte.csproj.CopyComplete
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\GrabAByte.dll
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.dll
 Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
@@ -76,3 +75,5 @@ Z:\2023\Prog\Grab A Byte\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.dll
 Z:\2023\Prog\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
 Z:\2023\Prog\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.genruntimeconfig.cache
 Z:\2023\Prog\Grab A Byte\GrabAByte\obj\Debug\net7.0\ref\GrabAByte.dll
+Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\GrabAByte.sourcelink.json
+Z:\2023\Programacion\GrabAByte\obj\Debug\net7.0\GrabAByte.csproj.Up2Date

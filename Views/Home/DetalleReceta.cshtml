@@ -2,11 +2,35 @@
     <img class="banner" src= "@ViewBag.Receta.Banner" alt="banner" style="margin-bottom: 2%">
     <h2>@ViewBag.Receta.Nombre</h2>
     <p>@ViewBag.Receta.Descripcion</p>
-    <div style="display: flex; align-items: center; ">
+
+
+  <div style="align-items: center; flex-direction: column; padding-bottom: 2%">
+
+    @if(ViewBag.MostrarVal)
+    {
+      <div style="align-items: baseline; flex-direction: column">
+
+        <p> 
+          Valoracion: @ViewBag.Puntaje ⭐ <br>
+          Dificultad: @ViewBag.Dificultad <br>
+          Tiempo: @ViewBag.Tiempo minutos
+        
+        </p>
+
+    </div>
+
+
+    }
+    
+    
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ValorarModal">
+      Valora esta Receta
+    </button>
     @if (ViewBag.Usuario.Nombre == "default")
     {
       <form action='@Url.Action("Perfil","Account")'>
-      <button type="submit" class="btn btn-primary" style="display:flex">Guardar</button>
+      <button type="submit" class="btn btn-primary" style="display:flex; -ms-flex-align: start;">Agregar a favoritos</button>
       </form>
     }
     else
@@ -21,6 +45,8 @@
       <div class="alert alert-info" role="alert" style="width: 70%; margin-left: 3vb; margin-top: 1.5vb;"> Receta Guardada! </div>
     }
     </div>
+  </div>
+    
     
     <div>
         <p><strong>Ingredientes</strong></p>
@@ -38,9 +64,7 @@
 
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ValorarModal" style="margin-top: 3vb">
-  Valora esta Receta
-</button>
+
 
 <div class="modal fade" id="ValorarModal" tabindex="-1" aria-labelledby="ValorarModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -54,15 +78,29 @@
             <input type="hidden" name="IDReceta" value="@ViewBag.Receta.ID">
             <label for="Valoracion">Valoracion</label>
             <input type="range" name="Puntaje" id="Puntaje" style="margin-bottom: 4%;"min="1" max="5">
+            <div style="margin-top: -4%;margin-left: 4.4rem;display: flex;flex-direction: row;justify-content: space-around;width: 32.6%;">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            </div>
             <br>
             <label for="Dificultad">Dificultad</label>
             <input type="range" name="Dificultad" id="Dificultad" style="margin-bottom: 4%;" min="1" max="5">
+            <div style="margin-top: -4%;margin-left: 4.4rem;display: flex;flex-direction: row;justify-content: space-around;width: 32.6%;">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            </div>
             <br>
             <label for="Duracion">Duracion</label>
             <input type="Number" name="Tiempo" id="Tiempo">
             <div class="form-text" style="display: flex; justify-content: flex-start; margin-bottom: 4%;">Ingrese la duracion en minutos.</div>
             <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Guardar Valoración</button>
       </div>
         </form>
       </div>
