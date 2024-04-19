@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrabAByte")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a0aa8ee041ebefd93e855d48d8e7f03ee174a07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+047e09756207bda45e9bc10b4618df384c3b49a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrabAByte")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrabAByte")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

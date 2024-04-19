@@ -159,13 +159,37 @@ public List<Receta> SacarDuplicados(List<Receta> list)
     {
         Receta rec = BD.RecetaPorID(IDReceta);
         ViewBag.volverHome = true;
-        ViewBag.perfil = true;
+        ViewBag.perfil = true;  
         ViewBag.ListaIngredientes = BD.LevantarIngredientesPorReceta(rec.ID);
         ViewBag.Usuario = BD.UsuarioIngresado;
         ViewBag.IDUsuario = BD.UsuarioIngresado.ID;
         ViewBag.Receta = rec;
         ViewBag.ListaPasos = BD.LevantarPasosPorReceta(rec.ID);
         ViewBag.AlertGuardado = true;
+
+        List<Valoracion>ListaValoraciones = BD.LevantarValoracionPorReceta(rec.ID);
+        double sumatiempo = 0;
+        double sumapuntaje = 0;
+        double sumadificultad = 0;
+        int i = 0;
+        foreach (Valoracion val in ListaValoraciones)
+        {
+            sumatiempo += val.Tiempo;
+            sumapuntaje += val.Puntaje;
+            sumadificultad += val.Dificultad;
+            i++;
+        }
+        if (i != 0)
+        {
+            ViewBag.Puntaje = sumapuntaje/i;
+            ViewBag.Dificultad = sumadificultad/i;
+            ViewBag.Tiempo = sumatiempo/i;
+            ViewBag.MostrarVal = true;  
+        }
+        else
+        {
+            ViewBag.MostrarVal = false;
+        }
         return View("DetalleReceta");
     }
     public IActionResult Creditos(){
