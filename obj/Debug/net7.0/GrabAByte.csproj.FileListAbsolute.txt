@@ -117,3 +117,43 @@ Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.d
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\GrabAByte.genruntimeconfig.cache
 Z:\2023\programacion\cuatrimestre2\GrabAByte\obj\Debug\net7.0\ref\GrabAByte.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\appsettings.Development.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\appsettings.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.staticwebassets.runtime.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.exe
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.deps.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.runtimeconfig.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\GrabAByte.pdb
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\Dapper.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.csproj.AssemblyReference.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.GeneratedMSBuildEditorConfig.editorconfig
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.AssemblyInfoInputs.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.AssemblyInfo.cs
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.csproj.CoreCompileInputs.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.MvcApplicationPartsAssemblyInfo.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.RazorAssemblyInfo.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.RazorAssemblyInfo.cs
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.sourcelink.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets.build.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets.development.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets\msbuild.GrabAByte.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets\msbuild.build.GrabAByte.props
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.GrabAByte.props
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.GrabAByte.props
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\scopedcss\bundle\GrabAByte.styles.css
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\scopedcss\projectbundle\GrabAByte.bundle.scp.css
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.csproj.Up2Date
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\refint\GrabAByte.dll
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.pdb
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\GrabAByte.genruntimeconfig.cache
+C:\Ort\Expo\Grab A Byte\GrabAByte\obj\Debug\net7.0\ref\GrabAByte.dll

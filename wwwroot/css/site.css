@@ -65,7 +65,8 @@ html {
 .imgboxhome{
   object-fit: cover;
   width: 12vw;
-  height: 100%;
+  height: 70%;
+  min-height: 70%;
   border-radius: 10%;
 }
 

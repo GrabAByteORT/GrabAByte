@@ -4,7 +4,7 @@ using System.Data;
 
 public static class BD
 {
-    public static string _connectionString = @"Server=localhost;
+    public static string _connectionString = @"Server=DESKTOP-KPRKEE1\SQLEXPRESS;
     DataBase=BDGrabAByte;Trusted_Connection=True";
 
     public static List<Receta> ListaRecetas {get;set;}
